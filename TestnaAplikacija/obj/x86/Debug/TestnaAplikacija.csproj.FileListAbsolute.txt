@@ -1,0 +1,7 @@
+C:\Users\DebilMC\Desktop\OOADTest\TestnaAplikacija\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\DebilMC\Desktop\OOADTest\TestnaAplikacija\bin\Debug\TestnaAplikacija.exe
+C:\Users\DebilMC\Desktop\OOADTest\TestnaAplikacija\bin\Debug\TestnaAplikacija.pdb
+C:\Users\DebilMC\Desktop\OOADTest\TestnaAplikacija\bin\Debug\DAL.dll
+C:\Users\DebilMC\Desktop\OOADTest\TestnaAplikacija\bin\Debug\DAL.pdb
+C:\Users\DebilMC\Desktop\OOADTest\TestnaAplikacija\obj\x86\Debug\TestnaAplikacija.exe
+C:\Users\DebilMC\Desktop\OOADTest\TestnaAplikacija\obj\x86\Debug\TestnaAplikacija.pdb
