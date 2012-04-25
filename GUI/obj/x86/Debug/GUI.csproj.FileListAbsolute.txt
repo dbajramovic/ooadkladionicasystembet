@@ -1,0 +1,12 @@
+C:\Users\DebilMC\Desktop\New folder\GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\DebilMC\Desktop\New folder\GUI\obj\x86\Debug\GUI.Form1.resources
+C:\Users\DebilMC\Desktop\New folder\GUI\obj\x86\Debug\GUI.Properties.Resources.resources
+C:\Users\DebilMC\Desktop\New folder\GUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\DebilMC\Desktop\New folder\GUI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\DebilMC\Desktop\New folder\GUI\bin\Debug\GUI.exe
+C:\Users\DebilMC\Desktop\New folder\GUI\bin\Debug\GUI.pdb
+C:\Users\DebilMC\Desktop\New folder\GUI\obj\x86\Debug\GUI.exe
+C:\Users\DebilMC\Desktop\New folder\GUI\obj\x86\Debug\GUI.pdb
+C:\Users\DebilMC\Desktop\New folder\GUI\obj\x86\Debug\GUI.UnosDogadjaja.resources
+C:\Users\DebilMC\Desktop\New folder\GUI\bin\Debug\DAL.dll
+C:\Users\DebilMC\Desktop\New folder\GUI\bin\Debug\DAL.pdb
