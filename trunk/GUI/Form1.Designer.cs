@@ -32,11 +32,12 @@
             this.b_stvaranje_t = new System.Windows.Forms.Button();
             this.b_registracija_c = new System.Windows.Forms.Button();
             this.b_registracija_z = new System.Windows.Forms.Button();
+            this.b_izlaz = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // b_unos_d
             // 
-            this.b_unos_d.Location = new System.Drawing.Point(74, 84);
+            this.b_unos_d.Location = new System.Drawing.Point(74, 73);
             this.b_unos_d.Name = "b_unos_d";
             this.b_unos_d.Size = new System.Drawing.Size(309, 48);
             this.b_unos_d.TabIndex = 0;
@@ -46,7 +47,7 @@
             // 
             // b_stvaranje_t
             // 
-            this.b_stvaranje_t.Location = new System.Drawing.Point(74, 138);
+            this.b_stvaranje_t.Location = new System.Drawing.Point(74, 127);
             this.b_stvaranje_t.Name = "b_stvaranje_t";
             this.b_stvaranje_t.Size = new System.Drawing.Size(309, 46);
             this.b_stvaranje_t.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // b_registracija_c
             // 
-            this.b_registracija_c.Location = new System.Drawing.Point(74, 190);
+            this.b_registracija_c.Location = new System.Drawing.Point(74, 179);
             this.b_registracija_c.Name = "b_registracija_c";
             this.b_registracija_c.Size = new System.Drawing.Size(309, 50);
             this.b_registracija_c.TabIndex = 2;
@@ -64,18 +65,29 @@
             // 
             // b_registracija_z
             // 
-            this.b_registracija_z.Location = new System.Drawing.Point(74, 246);
+            this.b_registracija_z.Location = new System.Drawing.Point(74, 235);
             this.b_registracija_z.Name = "b_registracija_z";
             this.b_registracija_z.Size = new System.Drawing.Size(309, 51);
             this.b_registracija_z.TabIndex = 3;
             this.b_registracija_z.Text = "Registracija Zaposlenika";
             this.b_registracija_z.UseVisualStyleBackColor = true;
             // 
+            // b_izlaz
+            // 
+            this.b_izlaz.Location = new System.Drawing.Point(74, 292);
+            this.b_izlaz.Name = "b_izlaz";
+            this.b_izlaz.Size = new System.Drawing.Size(309, 56);
+            this.b_izlaz.TabIndex = 4;
+            this.b_izlaz.Text = "Izlaz";
+            this.b_izlaz.UseVisualStyleBackColor = true;
+            this.b_izlaz.Click += new System.EventHandler(this.b_izlaz_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 335);
+            this.ClientSize = new System.Drawing.Size(454, 360);
+            this.Controls.Add(this.b_izlaz);
             this.Controls.Add(this.b_registracija_z);
             this.Controls.Add(this.b_registracija_c);
             this.Controls.Add(this.b_stvaranje_t);
@@ -93,6 +105,7 @@
         private System.Windows.Forms.Button b_stvaranje_t;
         private System.Windows.Forms.Button b_registracija_c;
         private System.Windows.Forms.Button b_registracija_z;
+        private System.Windows.Forms.Button b_izlaz;
     }
 }
 

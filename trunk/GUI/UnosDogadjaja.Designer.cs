@@ -202,7 +202,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.n_kvotax_1);
             this.groupBox2.Controls.Add(this.c_kvotax);
-            this.groupBox2.Location = new System.Drawing.Point(246, 76);
+            this.groupBox2.Location = new System.Drawing.Point(252, 76);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(225, 46);
             this.groupBox2.TabIndex = 5;
@@ -556,7 +556,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 296);
+            this.ClientSize = new System.Drawing.Size(492, 296);
             this.Controls.Add(this.b_odustani);
             this.Controls.Add(this.b_dodaj);
             this.Controls.Add(this.groupBox6);
@@ -571,6 +571,7 @@
             this.Controls.Add(this.t_imeprvogucesnika);
             this.Name = "UnosDogadjaja";
             this.Text = "Unos Događaja";
+            this.Load += new System.EventHandler(this.UnosDogadjaja_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_3)).EndInit();
