@@ -7,7 +7,7 @@ namespace DAL.Entiteti
 {
     public class Dogadjaj
     {
-        long id_dogadjaja;
+        long id;
         String imePrvogUcesnika;
         String imeDrugogUcesnika;
         double kvota_1, kvota_2, kvota_X, kvota_1X, kvota_X2, kvota_12;
@@ -25,10 +25,10 @@ namespace DAL.Entiteti
             Rezultat = -1;
         }
         ~Dogadjaj() { }
-        public long ID_Dogadjaja
+        public long Id
         {
-            get { return id_dogadjaja; }
-            set { id_dogadjaja = value; }
+            get { return id; }
+            set { id = value; }
         }
         public string ImePrvogUcesnika
         {
@@ -57,12 +57,12 @@ namespace DAL.Entiteti
             get { return kvota_1X; }
             set { kvota_1X = value; }
         }
-        public float Kvota_X2 { 
-            get { return Kvota_X2; }
+        public double Kvota_X2 { 
+            get { return kvota_X2; }
             set { kvota_X2 = value; }
         }
-        public float Kvota_12 { 
-            get { return Kvota_12; }
+        public double Kvota_12 { 
+            get { return kvota_12; }
             set { kvota_X2 = value; }
         }
     }

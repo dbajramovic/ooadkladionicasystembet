@@ -26,5 +26,10 @@ namespace GUI
             UnosDogadjaja u = new UnosDogadjaja();
             u.Show();
         }
+
+        private void b_izlaz_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
