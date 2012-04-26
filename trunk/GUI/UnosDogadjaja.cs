@@ -148,7 +148,7 @@ namespace GUI
             try
             {
                 DAL.DAL d = DAL.DAL.Instanca;
-                d.kreirajKonekciju("localhost", "kladionica1", "root", "");
+                d.kreirajKonekciju("localhost", "kladionica", "root", "");
 
                 DAL.DAL.DogadjajDAO dd = d.getDAO.getDogadjajDAO();
                 dog.Id = dd.create(dog);

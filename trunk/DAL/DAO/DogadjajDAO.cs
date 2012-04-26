@@ -19,7 +19,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("insert into dogadjaji values ('" + entity.ImeDrugogUcesnika + "','" + entity.ImeDrugogUcesnika + "','"+ entity.Kvota_1+"','"+entity.Kvota_X+ "','"+ entity.Kvota_2 + "','" + entity.Kvota_1X + "','" + entity.Kvota_X2 +"','"+ entity.Kvota_12 + "')", con);
+                    c = new MySqlCommand("INSERT INTO dogadjaji (ImePU,ImeDU,Kvota1,KvotaX,Kvota2,Kvota1X,KvotaX2,Kvota12) VALUES ('" + entity.ImeDrugogUcesnika + "','" + entity.ImeDrugogUcesnika + "','"+ entity.Kvota_1+"','"+entity.Kvota_X+ "','"+ entity.Kvota_2 + "','" + entity.Kvota_1X + "','" + entity.Kvota_X2 +"','"+ entity.Kvota_12 + "')", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
