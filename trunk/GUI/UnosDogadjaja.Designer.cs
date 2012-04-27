@@ -70,6 +70,12 @@
             this.c_kvota12 = new System.Windows.Forms.CheckBox();
             this.b_dodaj = new System.Windows.Forms.Button();
             this.b_odustani = new System.Windows.Forms.Button();
+            this.dtp_do = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.n_satnica_h = new System.Windows.Forms.NumericUpDown();
+            this.n_satnica_m = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_2)).BeginInit();
@@ -94,6 +100,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota12_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota12_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota12_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_satnica_h)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_satnica_m)).BeginInit();
             this.SuspendLayout();
             // 
             // t_imeprvogucesnika
@@ -122,7 +130,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 48);
+            this.label2.Location = new System.Drawing.Point(5, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 13);
             this.label2.TabIndex = 3;
@@ -135,7 +143,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.n_kvota1_1);
             this.groupBox1.Controls.Add(this.c_kvota1);
-            this.groupBox1.Location = new System.Drawing.Point(15, 76);
+            this.groupBox1.Location = new System.Drawing.Point(15, 95);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(225, 46);
             this.groupBox1.TabIndex = 4;
@@ -202,9 +210,9 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.n_kvotax_1);
             this.groupBox2.Controls.Add(this.c_kvotax);
-            this.groupBox2.Location = new System.Drawing.Point(252, 76);
+            this.groupBox2.Location = new System.Drawing.Point(255, 95);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(225, 46);
+            this.groupBox2.Size = new System.Drawing.Size(216, 46);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kvota X";
@@ -269,7 +277,7 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.n_kvota2_1);
             this.groupBox3.Controls.Add(this.c_kvota2);
-            this.groupBox3.Location = new System.Drawing.Point(15, 128);
+            this.groupBox3.Location = new System.Drawing.Point(15, 147);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(225, 46);
             this.groupBox3.TabIndex = 6;
@@ -336,9 +344,9 @@
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.n_kvota1x_1);
             this.groupBox4.Controls.Add(this.c_kvota1x);
-            this.groupBox4.Location = new System.Drawing.Point(252, 128);
+            this.groupBox4.Location = new System.Drawing.Point(255, 147);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(225, 46);
+            this.groupBox4.Size = new System.Drawing.Size(216, 46);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Kvota 1X";
@@ -403,7 +411,7 @@
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.n_kvotax2_1);
             this.groupBox5.Controls.Add(this.c_kvotax2);
-            this.groupBox5.Location = new System.Drawing.Point(15, 180);
+            this.groupBox5.Location = new System.Drawing.Point(15, 195);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(225, 46);
             this.groupBox5.TabIndex = 8;
@@ -470,9 +478,9 @@
             this.groupBox6.Controls.Add(this.label8);
             this.groupBox6.Controls.Add(this.n_kvota12_1);
             this.groupBox6.Controls.Add(this.c_kvota12);
-            this.groupBox6.Location = new System.Drawing.Point(252, 180);
+            this.groupBox6.Location = new System.Drawing.Point(255, 195);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(225, 46);
+            this.groupBox6.Size = new System.Drawing.Size(216, 46);
             this.groupBox6.TabIndex = 9;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Kvota 12";
@@ -534,7 +542,7 @@
             // 
             // b_dodaj
             // 
-            this.b_dodaj.Location = new System.Drawing.Point(15, 232);
+            this.b_dodaj.Location = new System.Drawing.Point(15, 247);
             this.b_dodaj.Name = "b_dodaj";
             this.b_dodaj.Size = new System.Drawing.Size(225, 52);
             this.b_dodaj.TabIndex = 10;
@@ -544,19 +552,85 @@
             // 
             // b_odustani
             // 
-            this.b_odustani.Location = new System.Drawing.Point(258, 232);
+            this.b_odustani.Location = new System.Drawing.Point(255, 247);
             this.b_odustani.Name = "b_odustani";
-            this.b_odustani.Size = new System.Drawing.Size(213, 52);
+            this.b_odustani.Size = new System.Drawing.Size(216, 52);
             this.b_odustani.TabIndex = 11;
             this.b_odustani.Text = "Odustani";
             this.b_odustani.UseVisualStyleBackColor = true;
             this.b_odustani.Click += new System.EventHandler(this.b_odustani_Click);
             // 
+            // dtp_do
+            // 
+            this.dtp_do.Location = new System.Drawing.Point(127, 74);
+            this.dtp_do.MinDate = new System.DateTime(2012, 4, 27, 0, 0, 0, 0);
+            this.dtp_do.Name = "dtp_do";
+            this.dtp_do.Size = new System.Drawing.Size(136, 20);
+            this.dtp_do.TabIndex = 12;
+            this.dtp_do.Value = new System.DateTime(2012, 4, 27, 13, 4, 36, 0);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(18, 77);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(101, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Datum Održavanja: ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(269, 77);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Satnica: ";
+            // 
+            // n_satnica_h
+            // 
+            this.n_satnica_h.Location = new System.Drawing.Point(324, 75);
+            this.n_satnica_h.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.n_satnica_h.Name = "n_satnica_h";
+            this.n_satnica_h.Size = new System.Drawing.Size(60, 20);
+            this.n_satnica_h.TabIndex = 15;
+            // 
+            // n_satnica_m
+            // 
+            this.n_satnica_m.Location = new System.Drawing.Point(399, 75);
+            this.n_satnica_m.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.n_satnica_m.Name = "n_satnica_m";
+            this.n_satnica_m.Size = new System.Drawing.Size(72, 20);
+            this.n_satnica_m.TabIndex = 16;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(387, 77);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(10, 13);
+            this.label11.TabIndex = 17;
+            this.label11.Text = ":";
+            // 
             // UnosDogadjaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 296);
+            this.ClientSize = new System.Drawing.Size(492, 311);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.n_satnica_m);
+            this.Controls.Add(this.n_satnica_h);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.dtp_do);
             this.Controls.Add(this.b_odustani);
             this.Controls.Add(this.b_dodaj);
             this.Controls.Add(this.groupBox6);
@@ -602,6 +676,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota12_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota12_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota12_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_satnica_h)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_satnica_m)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -651,5 +727,11 @@
         private System.Windows.Forms.CheckBox c_kvota12;
         private System.Windows.Forms.Button b_dodaj;
         private System.Windows.Forms.Button b_odustani;
+        private System.Windows.Forms.DateTimePicker dtp_do;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown n_satnica_h;
+        private System.Windows.Forms.NumericUpDown n_satnica_m;
+        private System.Windows.Forms.Label label11;
     }
 }
