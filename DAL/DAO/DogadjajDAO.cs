@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using DAL.Interfejsi;
 using DAL.Entiteti;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace DAL
@@ -19,7 +20,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("INSERT INTO dogadjaji (ImePU,ImeDU,Kvota1,KvotaX,Kvota2,Kvota1X,KvotaX2,Kvota12,DatumOdrzavanja,SatnicaOdrzavanja) VALUES ('" + entity.ImeDrugogUcesnika + "','" + entity.ImeDrugogUcesnika + "','"+ entity.Kvota_1+"','"+entity.Kvota_X+ "','"+ entity.Kvota_2 + "','" + entity.Kvota_1X + "','" + entity.Kvota_X2 +"','"+ entity.Kvota_12 + "','" + entity.DatumOdrzavanja + "','" + entity.SatnicaOdrzavanja +"')", con);
+                    c = new MySqlCommand("INSERT INTO dogadjaji (ImePU,ImeDU,Kvota1,KvotaX,Kvota2,Kvota1X,KvotaX2,Kvota12,DatumOdrzavanja,SatnicaOdrzavanja) VALUES ('" + entity.ImePrvogUcesnika + "','" + entity.ImeDrugogUcesnika + "','"+ entity.Kvota_1+"','"+entity.Kvota_X+ "','"+ entity.Kvota_2 + "','" + entity.Kvota_1X + "','" + entity.Kvota_X2 +"','"+ entity.Kvota_12 + "','" + Convert.ToString(entity.DatumOdrzavanja) + "','" + entity.SatnicaOdrzavanja +"')", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -64,7 +65,11 @@ namespace DAL
 
             public Dogadjaj getById(int id)
             {
-                throw new NotImplementedException();
+                c = new MySqlCommand("select '"+id+ "' from dogadjaji", con);
+                MySqlDataReader r = c.ExecuteReader();
+                Dogadjaj dog = new Dogadjaj(r.GetString("ImePU"), r.GetString("ImeDU"), r.GetDouble("Kvota1"), r.GetDouble("KvotaX"), r.GetDouble("Kvota2"), r.GetDouble("Kvota1X"), r.GetDouble("KvotaX2"), r.GetDouble("Kvota12"), r.GetDateTime("DatumOdrzavanja"), r.GetInt32("SatnicaOdrzavanja"));
+                dog.Rezultat = r.GetInt32("Rezultat");
+                return dog;
             }
 
             public List<Dogadjaj> getByExample(string name, string value)

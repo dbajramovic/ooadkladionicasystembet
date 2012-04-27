@@ -12,3 +12,4 @@ C:\Users\DebilMC\Desktop\New folder\GUI\bin\Debug\DAL.dll
 C:\Users\DebilMC\Desktop\New folder\GUI\bin\Debug\DAL.pdb
 C:\Users\DebilMC\Desktop\New folder\GUI\bin\Debug\Database1.sdf
 C:\Users\DebilMC\Desktop\New folder\GUI\bin\Debug\GUI.exe.config
+C:\Users\DebilMC\Desktop\New folder\GUI\obj\x86\Debug\GUI.AzuriranjeDogadjaja.resources

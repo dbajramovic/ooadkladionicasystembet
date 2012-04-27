@@ -153,6 +153,11 @@
             // n_kvota1_3
             // 
             this.n_kvota1_3.Location = new System.Drawing.Point(173, 16);
+            this.n_kvota1_3.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.n_kvota1_3.Name = "n_kvota1_3";
             this.n_kvota1_3.Size = new System.Drawing.Size(32, 20);
             this.n_kvota1_3.TabIndex = 4;
@@ -160,6 +165,11 @@
             // n_kvota1_2
             // 
             this.n_kvota1_2.Location = new System.Drawing.Point(135, 16);
+            this.n_kvota1_2.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.n_kvota1_2.Name = "n_kvota1_2";
             this.n_kvota1_2.Size = new System.Drawing.Size(32, 20);
             this.n_kvota1_2.TabIndex = 3;
@@ -220,6 +230,11 @@
             // n_kvotax_3
             // 
             this.n_kvotax_3.Location = new System.Drawing.Point(173, 16);
+            this.n_kvotax_3.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.n_kvotax_3.Name = "n_kvotax_3";
             this.n_kvotax_3.Size = new System.Drawing.Size(32, 20);
             this.n_kvotax_3.TabIndex = 4;
@@ -227,6 +242,11 @@
             // n_kvotax_2
             // 
             this.n_kvotax_2.Location = new System.Drawing.Point(135, 16);
+            this.n_kvotax_2.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.n_kvotax_2.Name = "n_kvotax_2";
             this.n_kvotax_2.Size = new System.Drawing.Size(32, 20);
             this.n_kvotax_2.TabIndex = 3;
@@ -287,6 +307,11 @@
             // n_kvota2_3
             // 
             this.n_kvota2_3.Location = new System.Drawing.Point(173, 16);
+            this.n_kvota2_3.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.n_kvota2_3.Name = "n_kvota2_3";
             this.n_kvota2_3.Size = new System.Drawing.Size(32, 20);
             this.n_kvota2_3.TabIndex = 4;
@@ -294,6 +319,11 @@
             // n_kvota2_2
             // 
             this.n_kvota2_2.Location = new System.Drawing.Point(135, 16);
+            this.n_kvota2_2.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.n_kvota2_2.Name = "n_kvota2_2";
             this.n_kvota2_2.Size = new System.Drawing.Size(32, 20);
             this.n_kvota2_2.TabIndex = 3;
@@ -354,6 +384,11 @@
             // n_kvota1x_3
             // 
             this.n_kvota1x_3.Location = new System.Drawing.Point(173, 16);
+            this.n_kvota1x_3.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.n_kvota1x_3.Name = "n_kvota1x_3";
             this.n_kvota1x_3.Size = new System.Drawing.Size(32, 20);
             this.n_kvota1x_3.TabIndex = 4;
@@ -361,6 +396,11 @@
             // n_kvota1x_2
             // 
             this.n_kvota1x_2.Location = new System.Drawing.Point(135, 16);
+            this.n_kvota1x_2.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.n_kvota1x_2.Name = "n_kvota1x_2";
             this.n_kvota1x_2.Size = new System.Drawing.Size(32, 20);
             this.n_kvota1x_2.TabIndex = 3;
@@ -421,6 +461,11 @@
             // n_kvotax2_3
             // 
             this.n_kvotax2_3.Location = new System.Drawing.Point(173, 16);
+            this.n_kvotax2_3.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.n_kvotax2_3.Name = "n_kvotax2_3";
             this.n_kvotax2_3.Size = new System.Drawing.Size(32, 20);
             this.n_kvotax2_3.TabIndex = 4;
@@ -428,6 +473,11 @@
             // n_kvotax2_2
             // 
             this.n_kvotax2_2.Location = new System.Drawing.Point(135, 16);
+            this.n_kvotax2_2.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.n_kvotax2_2.Name = "n_kvotax2_2";
             this.n_kvotax2_2.Size = new System.Drawing.Size(32, 20);
             this.n_kvotax2_2.TabIndex = 3;
@@ -488,6 +538,11 @@
             // n_kvota12_3
             // 
             this.n_kvota12_3.Location = new System.Drawing.Point(173, 16);
+            this.n_kvota12_3.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.n_kvota12_3.Name = "n_kvota12_3";
             this.n_kvota12_3.Size = new System.Drawing.Size(32, 20);
             this.n_kvota12_3.TabIndex = 4;
@@ -496,6 +551,11 @@
             // n_kvota12_2
             // 
             this.n_kvota12_2.Location = new System.Drawing.Point(135, 16);
+            this.n_kvota12_2.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.n_kvota12_2.Name = "n_kvota12_2";
             this.n_kvota12_2.Size = new System.Drawing.Size(32, 20);
             this.n_kvota12_2.TabIndex = 3;
