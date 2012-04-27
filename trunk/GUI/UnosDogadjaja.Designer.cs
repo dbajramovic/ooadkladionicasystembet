@@ -562,10 +562,10 @@
             // 
             // dtp_do
             // 
-            this.dtp_do.Location = new System.Drawing.Point(127, 74);
+            this.dtp_do.Location = new System.Drawing.Point(127, 75);
             this.dtp_do.MinDate = new System.DateTime(2012, 4, 27, 0, 0, 0, 0);
             this.dtp_do.Name = "dtp_do";
-            this.dtp_do.Size = new System.Drawing.Size(136, 20);
+            this.dtp_do.Size = new System.Drawing.Size(113, 20);
             this.dtp_do.TabIndex = 12;
             this.dtp_do.Value = new System.DateTime(2012, 4, 27, 13, 4, 36, 0);
             // 
@@ -581,7 +581,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(269, 77);
+            this.label10.Location = new System.Drawing.Point(258, 77);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 14;
@@ -589,7 +589,7 @@
             // 
             // n_satnica_h
             // 
-            this.n_satnica_h.Location = new System.Drawing.Point(324, 75);
+            this.n_satnica_h.Location = new System.Drawing.Point(313, 75);
             this.n_satnica_h.Maximum = new decimal(new int[] {
             23,
             0,
@@ -601,20 +601,20 @@
             // 
             // n_satnica_m
             // 
-            this.n_satnica_m.Location = new System.Drawing.Point(399, 75);
+            this.n_satnica_m.Location = new System.Drawing.Point(395, 75);
             this.n_satnica_m.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
             this.n_satnica_m.Name = "n_satnica_m";
-            this.n_satnica_m.Size = new System.Drawing.Size(72, 20);
+            this.n_satnica_m.Size = new System.Drawing.Size(75, 20);
             this.n_satnica_m.TabIndex = 16;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(387, 77);
+            this.label11.Location = new System.Drawing.Point(379, 77);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(10, 13);
             this.label11.TabIndex = 17;
@@ -624,7 +624,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 311);
+            this.ClientSize = new System.Drawing.Size(482, 307);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.n_satnica_m);
             this.Controls.Add(this.n_satnica_h);
