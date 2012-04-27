@@ -144,7 +144,7 @@ namespace GUI
             if (!c_kvota1x.Checked) kvota1x=1.00;
             if (!c_kvotax2.Checked) kvotax2=1.00;
             if (!c_kvota12.Checked) kvota12=1.00;
-            Dogadjaj dog = new Dogadjaj(t_imeprvogucesnika.Text, t_imedrugogucesnika.Text, kvota1, kvotax, kvota2, kvota1x, kvotax2, kvota12);
+            Dogadjaj dog = new Dogadjaj(t_imeprvogucesnika.Text, t_imedrugogucesnika.Text, kvota1, kvotax, kvota2, kvota1x, kvotax2, kvota12,dtp_do.Value,Convert.ToInt32(n_satnica_h.Value*1000+n_satnica_m.Value));
             try
             {
                 DAL.DAL d = DAL.DAL.Instanca;

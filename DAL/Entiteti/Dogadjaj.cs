@@ -12,7 +12,9 @@ namespace DAL.Entiteti
         String imeDrugogUcesnika;
         double kvota_1, kvota_2, kvota_X, kvota_1X, kvota_X2, kvota_12;
         int Rezultat;
-        public Dogadjaj(String ipu, String idu, double K1, double KX, double K2, double K1X, double KX2, double K12)
+        DateTime datumodrzavanja;
+        int satnicaodrzavanja;
+        public Dogadjaj(String ipu, String idu, double K1, double KX, double K2, double K1X, double KX2, double K12, DateTime vo,int so)
         {
             imePrvogUcesnika = ipu;
             imeDrugogUcesnika = idu;
@@ -22,6 +24,8 @@ namespace DAL.Entiteti
             kvota_1X = K1X;
             kvota_X2 = KX2;
             kvota_12 = K12;
+            datumodrzavanja = vo;
+            satnicaodrzavanja = so;
             Rezultat = -1;
         }
         ~Dogadjaj() { }
@@ -64,6 +68,16 @@ namespace DAL.Entiteti
         public double Kvota_12 { 
             get { return kvota_12; }
             set { kvota_X2 = value; }
+        }
+        public DateTime DatumOdrzavanja
+        {
+            get { return datumodrzavanja; }
+            set { datumodrzavanja = value; }
+        }
+        public int SatnicaOdrzavanja
+        {
+            get { return satnicaodrzavanja; }
+            set { satnicaodrzavanja = value; }
         }
     }
 }

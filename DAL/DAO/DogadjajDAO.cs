@@ -19,7 +19,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("INSERT INTO dogadjaji (ImePU,ImeDU,Kvota1,KvotaX,Kvota2,Kvota1X,KvotaX2,Kvota12) VALUES ('" + entity.ImeDrugogUcesnika + "','" + entity.ImeDrugogUcesnika + "','"+ entity.Kvota_1+"','"+entity.Kvota_X+ "','"+ entity.Kvota_2 + "','" + entity.Kvota_1X + "','" + entity.Kvota_X2 +"','"+ entity.Kvota_12 + "')", con);
+                    c = new MySqlCommand("INSERT INTO dogadjaji (ImePU,ImeDU,Kvota1,KvotaX,Kvota2,Kvota1X,KvotaX2,Kvota12,DatumOdrzavanja,SatnicaOdrzavanja) VALUES ('" + entity.ImeDrugogUcesnika + "','" + entity.ImeDrugogUcesnika + "','"+ entity.Kvota_1+"','"+entity.Kvota_X+ "','"+ entity.Kvota_2 + "','" + entity.Kvota_1X + "','" + entity.Kvota_X2 +"','"+ entity.Kvota_12 + "','" + entity.DatumOdrzavanja + "','" + entity.SatnicaOdrzavanja +"')", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -37,7 +37,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Dogadjaj> dogadjaji = new List<Dogadjaj>();
                     while (r.Read())
-                        dogadjaji.Add(new Dogadjaj(r.GetString("ime_prvog_ucesnika"), r.GetString("ime_drugog_ucesnika"), r.GetDouble("kvota_1"), r.GetDouble("kvota_x"), r.GetDouble("kvota_2"), r.GetDouble("kvota_1x"), r.GetDouble("kvota_x2"), r.GetDouble("kvota_12")));
+                        dogadjaji.Add(new Dogadjaj(r.GetString("ime_prvog_ucesnika"), r.GetString("ime_drugog_ucesnika"), r.GetDouble("kvota_1"), r.GetDouble("kvota_x"), r.GetDouble("kvota_2"), r.GetDouble("kvota_1x"), r.GetDouble("kvota_x2"), r.GetDouble("kvota_12"),r.GetDateTime("vrijeme_odrzavanja"),r.GetInt32("satnica")));
                     return dogadjaji;
                 }
                 catch (Exception e)
