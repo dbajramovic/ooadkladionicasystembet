@@ -31,5 +31,11 @@ namespace GUI
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AzuriranjeDogadjaja ad = new AzuriranjeDogadjaja();
+            ad.Show();
+        }
     }
 }
