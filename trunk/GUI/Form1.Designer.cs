@@ -72,6 +72,7 @@
             this.b_registracija_z.TabIndex = 3;
             this.b_registracija_z.Text = "Registracija Zaposlenika";
             this.b_registracija_z.UseVisualStyleBackColor = true;
+            this.b_registracija_z.Click += new System.EventHandler(this.b_registracija_z_Click);
             // 
             // b_izlaz
             // 
