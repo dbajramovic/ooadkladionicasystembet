@@ -84,5 +84,12 @@ namespace DAL.Entiteti
             get { return rezultat; }
             set { rezultat = value; }
         }
+        public List<int> DajDijelove() {
+            List<int>  lista_dijelova = new List<int>();
+            int velika_pom, mala_pom;
+            velika_pom = Convert.ToInt32(kvota_1*100);
+            mala_pom = velika_pom/10;
+            return lista_dijelova;
+        }
     }
 }

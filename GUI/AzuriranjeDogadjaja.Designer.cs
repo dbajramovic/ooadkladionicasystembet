@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.t_s_id_dogadjaja = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.b_search = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.t_ime_prvog_ucesnika = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.n_satnica_m = new System.Windows.Forms.NumericUpDown();
             this.n_satnica_h = new System.Windows.Forms.NumericUpDown();
@@ -80,8 +79,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.t_imedrugogucesnika = new System.Windows.Forms.TextBox();
             this.t_imeprvogucesnika = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.t_ime_prvog_ucesnika = new System.Windows.Forms.TextBox();
+            this.t_s_id_dogadjaja = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.b_search = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.n_satnica_m)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_satnica_h)).BeginInit();
@@ -133,45 +133,35 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.t_imedrugogucesnika);
             this.groupBox1.Controls.Add(this.t_imeprvogucesnika);
-            this.groupBox1.Location = new System.Drawing.Point(12, 42);
+            this.groupBox1.Location = new System.Drawing.Point(12, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(468, 300);
+            this.groupBox1.Size = new System.Drawing.Size(468, 301);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ažuriranje Događaja";
             this.groupBox1.Visible = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // t_s_id_dogadjaja
+            // label13
             // 
-            this.t_s_id_dogadjaja.Location = new System.Drawing.Point(130, 15);
-            this.t_s_id_dogadjaja.Name = "t_s_id_dogadjaja";
-            this.t_s_id_dogadjaja.Size = new System.Drawing.Size(239, 20);
-            this.t_s_id_dogadjaja.TabIndex = 1;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 13);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Ime Prvog Ucesnika: ";
             // 
-            // label1
+            // t_ime_prvog_ucesnika
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ID Događaja";
-            // 
-            // b_search
-            // 
-            this.b_search.Location = new System.Drawing.Point(375, 12);
-            this.b_search.Name = "b_search";
-            this.b_search.Size = new System.Drawing.Size(105, 23);
-            this.b_search.TabIndex = 5;
-            this.b_search.Text = "Traži";
-            this.b_search.UseVisualStyleBackColor = true;
-            this.b_search.Click += new System.EventHandler(this.b_search_Click);
+            this.t_ime_prvog_ucesnika.Location = new System.Drawing.Point(118, 13);
+            this.t_ime_prvog_ucesnika.Name = "t_ime_prvog_ucesnika";
+            this.t_ime_prvog_ucesnika.Size = new System.Drawing.Size(344, 20);
+            this.t_ime_prvog_ucesnika.TabIndex = 36;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(358, 57);
+            this.label11.Location = new System.Drawing.Point(371, 61);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(10, 13);
             this.label11.TabIndex = 35;
@@ -179,7 +169,7 @@
             // 
             // n_satnica_m
             // 
-            this.n_satnica_m.Location = new System.Drawing.Point(374, 57);
+            this.n_satnica_m.Location = new System.Drawing.Point(387, 59);
             this.n_satnica_m.Maximum = new decimal(new int[] {
             59,
             0,
@@ -191,20 +181,20 @@
             // 
             // n_satnica_h
             // 
-            this.n_satnica_h.Location = new System.Drawing.Point(292, 57);
+            this.n_satnica_h.Location = new System.Drawing.Point(291, 59);
             this.n_satnica_h.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
             this.n_satnica_h.Name = "n_satnica_h";
-            this.n_satnica_h.Size = new System.Drawing.Size(60, 20);
+            this.n_satnica_h.Size = new System.Drawing.Size(74, 20);
             this.n_satnica_h.TabIndex = 33;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(237, 59);
+            this.label10.Location = new System.Drawing.Point(237, 61);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 32;
@@ -706,7 +696,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 37);
+            this.label2.Location = new System.Drawing.Point(-4, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 13);
             this.label2.TabIndex = 21;
@@ -735,21 +725,31 @@
             this.t_imeprvogucesnika.Size = new System.Drawing.Size(344, 20);
             this.t_imeprvogucesnika.TabIndex = 18;
             // 
-            // label13
+            // t_s_id_dogadjaja
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 13);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "Ime Prvog Ucesnika: ";
+            this.t_s_id_dogadjaja.Location = new System.Drawing.Point(130, 15);
+            this.t_s_id_dogadjaja.Name = "t_s_id_dogadjaja";
+            this.t_s_id_dogadjaja.Size = new System.Drawing.Size(239, 20);
+            this.t_s_id_dogadjaja.TabIndex = 1;
             // 
-            // t_ime_prvog_ucesnika
+            // label1
             // 
-            this.t_ime_prvog_ucesnika.Location = new System.Drawing.Point(118, 13);
-            this.t_ime_prvog_ucesnika.Name = "t_ime_prvog_ucesnika";
-            this.t_ime_prvog_ucesnika.Size = new System.Drawing.Size(344, 20);
-            this.t_ime_prvog_ucesnika.TabIndex = 36;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(56, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "ID Događaja";
+            // 
+            // b_search
+            // 
+            this.b_search.Location = new System.Drawing.Point(375, 12);
+            this.b_search.Name = "b_search";
+            this.b_search.Size = new System.Drawing.Size(105, 23);
+            this.b_search.TabIndex = 5;
+            this.b_search.Text = "Traži";
+            this.b_search.UseVisualStyleBackColor = true;
+            this.b_search.Click += new System.EventHandler(this.b_search_Click);
             // 
             // AzuriranjeDogadjaja
             // 
@@ -761,7 +761,7 @@
             this.Controls.Add(this.t_s_id_dogadjaja);
             this.Controls.Add(this.groupBox1);
             this.Name = "AzuriranjeDogadjaja";
-            this.Text = "AzuriranjeDogadjaja";
+            this.Text = "Ažuriranje Događaja";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.n_satnica_m)).EndInit();
