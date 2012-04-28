@@ -37,5 +37,11 @@ namespace GUI
             AzuriranjeDogadjaja ad = new AzuriranjeDogadjaja();
             ad.Show();
         }
+
+        private void b_registracija_z_Click(object sender, EventArgs e)
+        {
+            Password f2 = new Password();
+            f2.Show();
+        }
     }
 }

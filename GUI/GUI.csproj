@@ -87,10 +87,22 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password.Designer.cs">
+      <DependentUpon>Password.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistracijaZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistracijaZaposlenika.Designer.cs">
+      <DependentUpon>RegistracijaZaposlenika.cs</DependentUpon>
     </Compile>
     <Compile Include="UnosDogadjaja.cs">
       <SubType>Form</SubType>
@@ -106,6 +118,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Password.resx">
+      <DependentUpon>Password.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -115,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistracijaZaposlenika.resx">
+      <DependentUpon>RegistracijaZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UnosDogadjaja.resx">
       <DependentUpon>UnosDogadjaja.cs</DependentUpon>
     </EmbeddedResource>
