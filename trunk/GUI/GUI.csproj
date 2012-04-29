@@ -87,6 +87,15 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="kladionicaDataSet.cs">
+      <DependentUpon>kladionicaDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kladionicaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kladionicaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Password.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +121,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnosTiketa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnosTiketa.Designer.cs">
+      <DependentUpon>UnosTiketa.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AzuriranjeDogadjaja.resx">
       <DependentUpon>AzuriranjeDogadjaja.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +151,10 @@
     <EmbeddedResource Include="UnosDogadjaja.resx">
       <DependentUpon>UnosDogadjaja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UnosTiketa.resx">
+      <DependentUpon>UnosTiketa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -151,6 +170,17 @@
     </None>
     <None Include="Database1DataSet.xss">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kladionicaDataSet.xsc">
+      <DependentUpon>kladionicaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kladionicaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kladionicaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kladionicaDataSet.xss">
+      <DependentUpon>kladionicaDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

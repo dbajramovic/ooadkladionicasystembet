@@ -32,5 +32,15 @@ namespace GUI.Properties {
                 return ((string)(this["Database1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;User Id=root;database=kladionica")]
+        public string kladionicaConnectionString {
+            get {
+                return ((string)(this["kladionicaConnectionString"]));
+            }
+        }
     }
 }
