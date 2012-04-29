@@ -49,5 +49,17 @@ namespace GUI
             UnosTiketa ut = new UnosTiketa();
             ut.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Kviz k = new Kviz();
+            k.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            UnosPitanja up = new UnosPitanja();
+            up.Show();
+        }
     }
 }

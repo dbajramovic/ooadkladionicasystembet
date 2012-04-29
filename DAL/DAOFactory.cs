@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace DAL
 {
     partial class DAL
@@ -35,7 +36,6 @@ namespace DAL
             {
                 return new DogadjajDAO();
             }
-
         }
     }
 }

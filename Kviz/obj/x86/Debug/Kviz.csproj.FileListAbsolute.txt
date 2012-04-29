@@ -1,0 +1,9 @@
+C:\Users\DebilMC\Desktop\New folder (2)\Kviz\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\DebilMC\Desktop\New folder (2)\Kviz\obj\x86\Debug\Kviz.Kviz.resources
+C:\Users\DebilMC\Desktop\New folder (2)\Kviz\obj\x86\Debug\Kviz.Properties.Resources.resources
+C:\Users\DebilMC\Desktop\New folder (2)\Kviz\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\DebilMC\Desktop\New folder (2)\Kviz\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\DebilMC\Desktop\New folder (2)\Kviz\bin\Debug\Kviz.exe
+C:\Users\DebilMC\Desktop\New folder (2)\Kviz\bin\Debug\Kviz.pdb
+C:\Users\DebilMC\Desktop\New folder (2)\Kviz\obj\x86\Debug\Kviz.exe
+C:\Users\DebilMC\Desktop\New folder (2)\Kviz\obj\x86\Debug\Kviz.pdb
