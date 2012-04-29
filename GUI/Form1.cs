@@ -43,5 +43,11 @@ namespace GUI
             Password f2 = new Password();
             f2.Show();
         }
+
+        private void b_stvaranje_t_Click(object sender, EventArgs e)
+        {
+            UnosTiketa ut = new UnosTiketa();
+            ut.Show();
+        }
     }
 }

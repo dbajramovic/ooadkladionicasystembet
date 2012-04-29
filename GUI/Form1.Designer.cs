@@ -54,6 +54,7 @@
             this.b_stvaranje_t.TabIndex = 1;
             this.b_stvaranje_t.Text = "Stvaranje Tiketa";
             this.b_stvaranje_t.UseVisualStyleBackColor = true;
+            this.b_stvaranje_t.Click += new System.EventHandler(this.b_stvaranje_t_Click);
             // 
             // b_registracija_c
             // 
