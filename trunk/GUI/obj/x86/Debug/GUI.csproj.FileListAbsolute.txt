@@ -31,3 +31,5 @@ C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GenerateResource.write
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.Password.resources
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.RegistracijaZaposlenika.resources
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.UnosTiketa.resources
+C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.Kviz.resources
+C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.UnosPitanja.resources

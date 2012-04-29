@@ -48,8 +48,6 @@ namespace GUI
                 dtp_do.Value = rezultat.DatumOdrzavanja;
                 n_satnica_m.Value = rezultat.SatnicaOdrzavanja % 100;
                 n_satnica_h.Value = rezultat.SatnicaOdrzavanja / 100;
-                List<int> kvote = rezultat.DajDijelove();
-                n_kvota1_3.Value = kvote[0];
             }
         }
     }

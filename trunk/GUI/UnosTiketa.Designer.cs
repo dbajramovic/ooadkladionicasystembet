@@ -251,7 +251,7 @@
             this.Controls.Add(this.fillByIdToolStrip);
             this.Controls.Add(this.dataGridView1);
             this.Name = "UnosTiketa";
-            this.Text = "UnosTiketa";
+            this.Text = "Unos Tiketa";
             this.Load += new System.EventHandler(this.UnosTiketa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dogadjajiBindingSource)).EndInit();
