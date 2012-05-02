@@ -46,7 +46,11 @@ namespace DAL
         {
             try
             {
-                if (con != null)  con.Close();
+                if (con != null)
+                {
+                    con.Close();
+                    con = null;
+                }
             }
             catch (Exception e) { throw e; }
         }

@@ -24,7 +24,6 @@ C:\Users\DebilMC\Desktop\New folder (2)\GUI\bin\Debug\DAL.pdb
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.AzuriranjeDogadjaja.resources
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.Form1.resources
-C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.Properties.Resources.resources
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.UnosDogadjaja.resources
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GenerateResource.write.1.tlog
@@ -33,3 +32,5 @@ C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.RegistracijaZaposl
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.UnosTiketa.resources
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.Kviz.resources
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.UnosPitanja.resources
+C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.UnosClana.resources
+C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.Resources.resources

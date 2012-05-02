@@ -66,6 +66,7 @@
             this.b_registracija_c.TabIndex = 2;
             this.b_registracija_c.Text = "Registracija Člana";
             this.b_registracija_c.UseVisualStyleBackColor = true;
+            this.b_registracija_c.Click += new System.EventHandler(this.b_registracija_c_Click);
             // 
             // b_registracija_z
             // 

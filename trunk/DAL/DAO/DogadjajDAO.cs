@@ -14,7 +14,7 @@ namespace DAL
         public class DogadjajDAO : IDaoCrud<Dogadjaj>
         {
             #region IDaoCrud<Dogadjaj> Members
-            protected MySqlCommand c;
+            protected MySqlCommand c,u,d;
 
             public long create(Dogadjaj entity)
             {
@@ -38,7 +38,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Dogadjaj> dogadjaji = new List<Dogadjaj>();
                     while (r.Read())
-                        dogadjaji.Add(new Dogadjaj(r.GetString("ImePU"), r.GetString("ImeDU"), r.GetDouble("Kvota1"), r.GetDouble("KvotaX"), r.GetDouble("Kvota2"), r.GetDouble("Kvota1X"), r.GetDouble("KvotaX2"), r.GetDouble("Kvota12"), r.GetDateTime("DatumOdrzavanja"), r.GetInt32("SatnicaOdrzavanja")));
+                        dogadjaji.Add(new Dogadjaj(r.GetString("ImePU"), r.GetString("ImeDU"), r.GetDouble("Kvota1"), r.GetDouble("KvotaX"), r.GetDouble("Kvota2"), r.GetDouble("Kvota1X"), r.GetDouble("KvotaX2"), r.GetDouble("Kvota12"), r.GetString("DatumOdrzavanja"), r.GetInt32("SatnicaOdrzavanja")));
                     r.Close();
                     return dogadjaji;
                 }
@@ -56,19 +56,23 @@ namespace DAL
 
             public Dogadjaj update(Dogadjaj entity)
             {
-                throw new NotImplementedException();
+                u = new MySqlCommand("UPDATE dogadjaji SET ImePU = '"+entity.ImePrvogUcesnika+"',ImeDU='"+entity.ImeDrugogUcesnika+"',Kvota1="+entity.Kvota_1+",KvotaX="+entity.Kvota_X+",Kvota2="+entity.Kvota_2+",Kvota1X="+entity.Kvota_1X+",KvotaX2="+entity.Kvota_2+",Kvota12="+entity.Kvota_12+",DatumOdrzavanja='"+entity.DatumOdrzavanja+"',SatnicaOdrzavanja="+entity.SatnicaOdrzavanja+",Rezultat="+entity.Rezultat+" WHERE IDDogadjaja = "+entity.Id,con);
+                u.ExecuteNonQuery();
+                return entity;
             }
 
             public void delete(Dogadjaj entity)
             {
-                throw new NotImplementedException();
+                d = new MySqlCommand("DELETE FROM dogadjaji WHERE IDDogadjaja = " + entity.Id, con);
+                d.ExecuteNonQuery();
             }
 
             public Dogadjaj getById(int id)
             {
-                c = new MySqlCommand("select '"+id+ "' from dogadjaji", con);
+                c = new MySqlCommand("SELECT * from dogadjaji WHERE IdDogadjaja='"+id+"'", con);
                 MySqlDataReader r = c.ExecuteReader();
-                Dogadjaj dog = new Dogadjaj(r.GetString("ImePU"), r.GetString("ImeDU"), r.GetDouble("Kvota1"), r.GetDouble("KvotaX"), r.GetDouble("Kvota2"), r.GetDouble("Kvota1X"), r.GetDouble("KvotaX2"), r.GetDouble("Kvota12"), r.GetDateTime("DatumOdrzavanja"), r.GetInt32("SatnicaOdrzavanja"));
+                r.Read();
+                Dogadjaj dog = new Dogadjaj(r.GetString("ImePU"), r.GetString("ImeDU"), r.GetDouble("Kvota1"), r.GetDouble("KvotaX"), r.GetDouble("Kvota2"), r.GetDouble("Kvota1X"), r.GetDouble("KvotaX2"), r.GetDouble("Kvota12"), r.GetString("DatumOdrzavanja"), r.GetInt32("SatnicaOdrzavanja"));
                 dog.Rezultat = r.GetInt32("Rezultat");
                 r.Close();
                 return dog;

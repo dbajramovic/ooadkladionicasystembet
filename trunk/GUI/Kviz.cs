@@ -27,10 +27,6 @@ namespace GUI
             DAL.DAL.PitanjeDAO pd = new DAL.DAL.PitanjeDAO();
             lista_pitanja = pd.getAll();
             granica = lista_pitanja.Count;
-            foreach (Pitanje  a in lista_pitanja)
-            {
-                MessageBox.Show(a.TekstPitanja);
-            }
             richTextBox1.Text = lista_pitanja[br_pitanja].TekstPitanja;
             r_a.Text = lista_pitanja[br_pitanja].OdgovorA;
             r_b.Text = lista_pitanja[br_pitanja].OdgovorB;
@@ -68,6 +64,7 @@ namespace GUI
             else
             {
                 MessageBox.Show("Netačno! Skupili ste "+ tacan_odgovor+ " bodova");
+                d.terminirajKonekciju();
                 this.Close();
             }
         }
@@ -87,12 +84,14 @@ namespace GUI
             catch (Exception r)
             {
                 MessageBox.Show(r.Message);
+                d.terminirajKonekciju();
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hvala na igranju! Osvojili ste " + bodovi + " bodova!");
+            d.terminirajKonekciju();
             this.Close();
         }
     }
