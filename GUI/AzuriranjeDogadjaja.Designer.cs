@@ -82,6 +82,9 @@
             this.t_s_id_dogadjaja = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.b_search = new System.Windows.Forms.Button();
+            this.n_rezultat = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.n_satnica_m)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_satnica_h)).BeginInit();
@@ -109,10 +112,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_rezultat)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.n_rezultat);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.t_ime_prvog_ucesnika);
             this.groupBox1.Controls.Add(this.label11);
@@ -121,8 +128,6 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.dtp_do);
-            this.groupBox1.Controls.Add(this.b_odustani);
-            this.groupBox1.Controls.Add(this.b_dodaj);
             this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox4);
@@ -145,7 +150,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 16);
+            this.label13.Location = new System.Drawing.Point(3, 16);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(109, 13);
             this.label13.TabIndex = 37;
@@ -220,7 +225,7 @@
             // 
             // b_odustani
             // 
-            this.b_odustani.Location = new System.Drawing.Point(240, 242);
+            this.b_odustani.Location = new System.Drawing.Point(258, 348);
             this.b_odustani.Name = "b_odustani";
             this.b_odustani.Size = new System.Drawing.Size(216, 52);
             this.b_odustani.TabIndex = 29;
@@ -230,12 +235,13 @@
             // 
             // b_dodaj
             // 
-            this.b_dodaj.Location = new System.Drawing.Point(6, 242);
+            this.b_dodaj.Location = new System.Drawing.Point(18, 348);
             this.b_dodaj.Name = "b_dodaj";
             this.b_dodaj.Size = new System.Drawing.Size(225, 52);
             this.b_dodaj.TabIndex = 28;
             this.b_dodaj.Text = "Dodaj";
             this.b_dodaj.UseVisualStyleBackColor = true;
+            this.b_dodaj.Click += new System.EventHandler(this.b_dodaj_Click);
             // 
             // groupBox6
             // 
@@ -696,7 +702,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(-4, 37);
+            this.label2.Location = new System.Drawing.Point(3, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 13);
             this.label2.TabIndex = 21;
@@ -751,15 +757,55 @@
             this.b_search.UseVisualStyleBackColor = true;
             this.b_search.Click += new System.EventHandler(this.b_search_Click);
             // 
+            // n_rezultat
+            // 
+            this.n_rezultat.Location = new System.Drawing.Point(111, 255);
+            this.n_rezultat.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.n_rezultat.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.n_rezultat.Name = "n_rezultat";
+            this.n_rezultat.Size = new System.Drawing.Size(120, 20);
+            this.n_rezultat.TabIndex = 38;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(8, 250);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(97, 25);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "Rezultat:";
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(246, 252);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(210, 23);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Briši Događaj";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AzuriranjeDogadjaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 348);
+            this.ClientSize = new System.Drawing.Size(492, 409);
             this.Controls.Add(this.b_search);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.t_s_id_dogadjaja);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.b_dodaj);
+            this.Controls.Add(this.b_odustani);
             this.Name = "AzuriranjeDogadjaja";
             this.Text = "Ažuriranje Događaja";
             this.groupBox1.ResumeLayout(false);
@@ -796,6 +842,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_rezultat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -857,5 +904,8 @@
         private System.Windows.Forms.TextBox t_imeprvogucesnika;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox t_ime_prvog_ucesnika;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown n_rezultat;
+        private System.Windows.Forms.Button button1;
     }
 }

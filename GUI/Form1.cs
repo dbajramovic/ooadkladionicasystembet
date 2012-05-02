@@ -61,5 +61,11 @@ namespace GUI
             UnosPitanja up = new UnosPitanja();
             up.Show();
         }
+
+        private void b_registracija_c_Click(object sender, EventArgs e)
+        {
+            UnosClana uc = new UnosClana();
+            uc.Show();
+        }
     }
 }

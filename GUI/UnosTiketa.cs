@@ -72,10 +72,10 @@ namespace GUI
 
         private void b_dodaj_Click(object sender, EventArgs e)
         {
-            Dogadjaj d = new Dogadjaj(Convert.ToString(dataGridView1.SelectedRows[0].Cells[0].Value), Convert.ToString(dataGridView1.SelectedRows[0].Cells[1].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[2].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[3].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[4].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[5].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[6].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[7].Value), Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[9].Value), Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[10].Value));
+            Dogadjaj d = new Dogadjaj(Convert.ToString(dataGridView1.SelectedRows[0].Cells[0].Value), Convert.ToString(dataGridView1.SelectedRows[0].Cells[1].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[2].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[3].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[4].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[5].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[6].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[7].Value), Convert.ToString(dataGridView1.SelectedRows[0].Cells[9].Value), Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[10].Value));
             d.Rezultat = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[8].Value);
             try { 
-            if (d.DatumOdrzavanja < DateTime.Now) throw new Exception("Taj događaj je već prošao!");
+            if (Convert.ToDateTime(d.DatumOdrzavanja) < DateTime.Now) throw new Exception("Taj događaj je već prošao!");
             ld.Add(d);
             dataGridView2.DataSource = ld;
             }
