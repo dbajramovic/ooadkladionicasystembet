@@ -35,6 +35,8 @@
             this.r_d = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.l_br_bodova = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -109,11 +111,33 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(203, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 25);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Broj Bodova :";
+            // 
+            // l_br_bodova
+            // 
+            this.l_br_bodova.AutoSize = true;
+            this.l_br_bodova.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_br_bodova.Location = new System.Drawing.Point(376, 106);
+            this.l_br_bodova.Name = "l_br_bodova";
+            this.l_br_bodova.Size = new System.Drawing.Size(70, 25);
+            this.l_br_bodova.TabIndex = 8;
+            this.l_br_bodova.Text = "label2";
+            // 
             // Kviz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 215);
+            this.Controls.Add(this.l_br_bodova);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.r_d);
@@ -138,6 +162,8 @@
         private System.Windows.Forms.RadioButton r_d;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label l_br_bodova;
     }
 }
 
