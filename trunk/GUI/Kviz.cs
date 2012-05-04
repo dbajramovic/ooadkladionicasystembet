@@ -34,31 +34,28 @@ namespace GUI
             r_d.Text = lista_pitanja[br_pitanja].OdgovorD;
             tacan_odgovor = lista_pitanja[br_pitanja].TacanOdgovor;
             br_pitanja++;
+            l_br_bodova.Text = Convert.ToString(bodovi);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (r_a.Checked == true && tacan_odgovor == 1) {
                 bodovi++;
-                MessageBox.Show("Tačno! Bodovi : "+bodovi); 
                 this.Osvjezi_Pitanje();
             }
             else if (r_b.Checked == true && tacan_odgovor == 2)
             {
                 bodovi++;
-                MessageBox.Show("Tačno! Bodovi : " + bodovi);
                 this.Osvjezi_Pitanje();
             }
             else if (r_c.Checked == true && tacan_odgovor == 3)
             {
                 bodovi++;
-                MessageBox.Show("Tačno! Bodovi : " + bodovi);
                 this.Osvjezi_Pitanje();
             }
             else if (r_d.Checked == true && tacan_odgovor == 4)
             {
                 bodovi++;
-                MessageBox.Show("Tačno! Bodovi : " + bodovi);
                 this.Osvjezi_Pitanje();
             }
             else
@@ -72,19 +69,24 @@ namespace GUI
         {
             try
             {
+                if (br_pitanja == granica) throw new Exception("Nema više pitanja!");
                 richTextBox1.Text = lista_pitanja[br_pitanja].TekstPitanja;
                 r_a.Text = lista_pitanja[br_pitanja].OdgovorA;
                 r_b.Text = lista_pitanja[br_pitanja].OdgovorB;
                 r_c.Text = lista_pitanja[br_pitanja].OdgovorC;
                 r_d.Text = lista_pitanja[br_pitanja].OdgovorD;
                 tacan_odgovor = lista_pitanja[br_pitanja].TacanOdgovor;
-                if (br_pitanja == granica) throw new Exception("Nema više pitanja!");
                 br_pitanja++;
+                l_br_bodova.Text = "";
+                l_br_bodova.Text = Convert.ToString(bodovi);
             }
             catch (Exception r)
             {
                 MessageBox.Show(r.Message);
                 d.terminirajKonekciju();
+                MessageBox.Show("Hvala na igranju! Osvojili ste " + bodovi + " bodova!");
+                d.terminirajKonekciju();
+                this.Close();
             }
         }
 
