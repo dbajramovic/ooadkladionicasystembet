@@ -38,7 +38,11 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Dogadjaj> dogadjaji = new List<Dogadjaj>();
                     while (r.Read())
-                        dogadjaji.Add(new Dogadjaj(r.GetString("ImePU"), r.GetString("ImeDU"), r.GetDouble("Kvota1"), r.GetDouble("KvotaX"), r.GetDouble("Kvota2"), r.GetDouble("Kvota1X"), r.GetDouble("KvotaX2"), r.GetDouble("Kvota12"), r.GetString("DatumOdrzavanja"), r.GetInt32("SatnicaOdrzavanja")));
+                    {
+                         Dogadjaj f = new Dogadjaj(r.GetString("ImePU"), r.GetString("ImeDU"), r.GetDouble("Kvota1"), r.GetDouble("KvotaX"), r.GetDouble("Kvota2"), r.GetDouble("Kvota1X"), r.GetDouble("KvotaX2"), r.GetDouble("Kvota12"), r.GetString("DatumOdrzavanja"), r.GetInt32("SatnicaOdrzavanja"));
+                         f.Id = r.GetInt32("IDDogadjaja");
+                        dogadjaji.Add(f);
+                    }
                     r.Close();
                     return dogadjaji;
                 }
@@ -74,6 +78,7 @@ namespace DAL
                 r.Read();
                 Dogadjaj dog = new Dogadjaj(r.GetString("ImePU"), r.GetString("ImeDU"), r.GetDouble("Kvota1"), r.GetDouble("KvotaX"), r.GetDouble("Kvota2"), r.GetDouble("Kvota1X"), r.GetDouble("KvotaX2"), r.GetDouble("Kvota12"), r.GetString("DatumOdrzavanja"), r.GetInt32("SatnicaOdrzavanja"));
                 dog.Rezultat = r.GetInt32("Rezultat");
+                dog.Id = r.GetInt32("IDDogadjaja");
                 r.Close();
                 return dog;
             }
