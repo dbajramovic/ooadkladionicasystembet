@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kladionicaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="kladionicaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="dogadjaji" EntityType="kladionicaModel.dogadjaji" />
+  </EntityContainer>
+  <EntityType Name="dogadjaji">
+    <Key>
+      <PropertyRef Name="IdDogadjaja" />
+    </Key>
+    <Property Name="ImePU" Type="String" />
+    <Property Name="ImeDU" Type="String" />
+    <Property Name="Kvota1" Type="Decimal" />
+    <Property Name="KvotaX" Type="Decimal" />
+    <Property Name="Kvota2" Type="Decimal" />
+    <Property Name="Kvota1X" Type="Decimal" />
+    <Property Name="KvotaX2" Type="Decimal" />
+    <Property Name="Kvota12" Type="Decimal" />
+    <Property Name="Rezultat" Type="Int32" />
+    <Property Name="DatumOdrzavanja" Type="String" />
+    <Property Name="SatnicaOdrzavanja" Type="Int32" />
+    <Property Name="IdDogadjaja" Type="Decimal" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

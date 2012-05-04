@@ -36,6 +36,7 @@
             this.t_pretraga = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.b_pretraga = new System.Windows.Forms.Button();
+            this.c_clan = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -112,11 +113,23 @@
             this.b_pretraga.UseVisualStyleBackColor = true;
             this.b_pretraga.Click += new System.EventHandler(this.b_pretraga_Click);
             // 
+            // c_clan
+            // 
+            this.c_clan.AutoSize = true;
+            this.c_clan.Location = new System.Drawing.Point(651, 6);
+            this.c_clan.Name = "c_clan";
+            this.c_clan.Size = new System.Drawing.Size(47, 17);
+            this.c_clan.TabIndex = 13;
+            this.c_clan.Text = "Član";
+            this.c_clan.UseVisualStyleBackColor = true;
+            this.c_clan.CheckedChanged += new System.EventHandler(this.c_clan_CheckedChanged);
+            // 
             // UnosTiketa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 398);
+            this.Controls.Add(this.c_clan);
             this.Controls.Add(this.b_pretraga);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.t_pretraga);
@@ -154,5 +167,6 @@
         private System.Windows.Forms.TextBox t_pretraga;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button b_pretraga;
+        private System.Windows.Forms.CheckBox c_clan;
     }
 }

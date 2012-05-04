@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="kladionicaModelStoreContainer" CdmEntityContainer="kladionicaEntities">
+    <EntitySetMapping Name="dogadjaji">
+      <EntityTypeMapping TypeName="kladionicaModel.dogadjaji">
+        <MappingFragment StoreEntitySet="dogadjaji">
+          <ScalarProperty Name="ImePU" ColumnName="ImePU" />
+          <ScalarProperty Name="ImeDU" ColumnName="ImeDU" />
+          <ScalarProperty Name="Kvota1" ColumnName="Kvota1" />
+          <ScalarProperty Name="KvotaX" ColumnName="KvotaX" />
+          <ScalarProperty Name="Kvota2" ColumnName="Kvota2" />
+          <ScalarProperty Name="Kvota1X" ColumnName="Kvota1X" />
+          <ScalarProperty Name="KvotaX2" ColumnName="KvotaX2" />
+          <ScalarProperty Name="Kvota12" ColumnName="Kvota12" />
+          <ScalarProperty Name="Rezultat" ColumnName="Rezultat" />
+          <ScalarProperty Name="DatumOdrzavanja" ColumnName="DatumOdrzavanja" />
+          <ScalarProperty Name="SatnicaOdrzavanja" ColumnName="SatnicaOdrzavanja" />
+          <ScalarProperty Name="IdDogadjaja" ColumnName="IdDogadjaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

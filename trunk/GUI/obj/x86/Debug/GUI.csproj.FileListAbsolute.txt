@@ -34,3 +34,5 @@ C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.Kviz.resources
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.UnosPitanja.resources
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.UnosClana.resources
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.Resources.resources
+C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.OdabirClana.resources
+C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.ProvjeraDobitka.resources

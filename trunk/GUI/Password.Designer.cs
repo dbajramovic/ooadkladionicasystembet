@@ -80,6 +80,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.maskedTextBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Password";
             this.Text = "Password";
             this.ResumeLayout(false);
