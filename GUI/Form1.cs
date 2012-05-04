@@ -67,5 +67,11 @@ namespace GUI
             UnosClana uc = new UnosClana();
             uc.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ProvjeraDobitka pd = new ProvjeraDobitka();
+            pd.Show();
+        }
     }
 }

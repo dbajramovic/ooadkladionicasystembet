@@ -39,6 +39,7 @@ namespace DAL
                     List<Pitanje> Pitanja = new List<Pitanje>();
                     while (r.Read())
                         Pitanja.Add(new Pitanje(r.GetString("Pitanje"), r.GetString("OdgovorA"),r.GetString("OdgovorB"),r.GetString("OdgovorC"),r.GetString("OdgovorD"),r.GetInt32("TacanOdgovor")));
+                    r.Close();
                     return Pitanja;
                 }
                 catch (Exception e)

@@ -116,5 +116,14 @@ namespace GUI
                 d.terminirajKonekciju();
             }
         }
+
+        private void c_clan_CheckedChanged(object sender, EventArgs e)
+        {
+            if (c_clan.Checked == true)
+            {
+                OdabirClana oc = new OdabirClana();
+                oc.Show();
+            }
+        }
     }
 }

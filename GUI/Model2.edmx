@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="kladionicaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="kladionicaModelStoreContainer">
+          <EntitySet Name="dogadjaji" EntityType="kladionicaModel.Store.dogadjaji" store:Type="Tables" Schema="kladionica" />
+        </EntityContainer>
+        <EntityType Name="dogadjaji">
+          <Key>
+            <PropertyRef Name="IdDogadjaja" />
+          </Key>
+          <Property Name="ImePU" Type="varchar" MaxLength="30" />
+          <Property Name="ImeDU" Type="varchar" MaxLength="30" />
+          <Property Name="Kvota1" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="KvotaX" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Kvota2" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Kvota1X" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="KvotaX2" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Kvota12" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="Rezultat" Type="int" />
+          <Property Name="DatumOdrzavanja" Type="varchar" MaxLength="30" />
+          <Property Name="SatnicaOdrzavanja" Type="int" />
+          <Property Name="IdDogadjaja" Type="ubigint" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="kladionicaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="kladionicaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="dogadjaji" EntityType="kladionicaModel.dogadjaji" />
+        </EntityContainer>
+        <EntityType Name="dogadjaji">
+          <Key>
+            <PropertyRef Name="IdDogadjaja" />
+          </Key>
+          <Property Name="ImePU" Type="String" />
+          <Property Name="ImeDU" Type="String" />
+          <Property Name="Kvota1" Type="Decimal" />
+          <Property Name="KvotaX" Type="Decimal" />
+          <Property Name="Kvota2" Type="Decimal" />
+          <Property Name="Kvota1X" Type="Decimal" />
+          <Property Name="KvotaX2" Type="Decimal" />
+          <Property Name="Kvota12" Type="Decimal" />
+          <Property Name="Rezultat" Type="Int32" />
+          <Property Name="DatumOdrzavanja" Type="String" />
+          <Property Name="SatnicaOdrzavanja" Type="Int32" />
+          <Property Name="IdDogadjaja" Type="Decimal" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="kladionicaModelStoreContainer" CdmEntityContainer="kladionicaEntities">
+          <EntitySetMapping Name="dogadjaji"><EntityTypeMapping TypeName="kladionicaModel.dogadjaji"><MappingFragment StoreEntitySet="dogadjaji">
+            <ScalarProperty Name="ImePU" ColumnName="ImePU" />
+            <ScalarProperty Name="ImeDU" ColumnName="ImeDU" />
+            <ScalarProperty Name="Kvota1" ColumnName="Kvota1" />
+            <ScalarProperty Name="KvotaX" ColumnName="KvotaX" />
+            <ScalarProperty Name="Kvota2" ColumnName="Kvota2" />
+            <ScalarProperty Name="Kvota1X" ColumnName="Kvota1X" />
+            <ScalarProperty Name="KvotaX2" ColumnName="KvotaX2" />
+            <ScalarProperty Name="Kvota12" ColumnName="Kvota12" />
+            <ScalarProperty Name="Rezultat" ColumnName="Rezultat" />
+            <ScalarProperty Name="DatumOdrzavanja" ColumnName="DatumOdrzavanja" />
+            <ScalarProperty Name="SatnicaOdrzavanja" ColumnName="SatnicaOdrzavanja" />
+            <ScalarProperty Name="IdDogadjaja" ColumnName="IdDogadjaja" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model2">
+        <EntityTypeShape EntityType="kladionicaModel.dogadjaji" Width="1.5" PointX="0.75" PointY="0.75" Height="3.3263964843749996" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

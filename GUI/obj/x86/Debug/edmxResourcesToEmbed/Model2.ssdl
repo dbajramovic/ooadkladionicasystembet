@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kladionicaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="kladionicaModelStoreContainer">
+    <EntitySet Name="dogadjaji" EntityType="kladionicaModel.Store.dogadjaji" store:Type="Tables" Schema="kladionica" />
+  </EntityContainer>
+  <EntityType Name="dogadjaji">
+    <Key>
+      <PropertyRef Name="IdDogadjaja" />
+    </Key>
+    <Property Name="ImePU" Type="varchar" MaxLength="30" />
+    <Property Name="ImeDU" Type="varchar" MaxLength="30" />
+    <Property Name="Kvota1" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="KvotaX" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="Kvota2" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="Kvota1X" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="KvotaX2" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="Kvota12" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="Rezultat" Type="int" />
+    <Property Name="DatumOdrzavanja" Type="varchar" MaxLength="30" />
+    <Property Name="SatnicaOdrzavanja" Type="int" />
+    <Property Name="IdDogadjaja" Type="ubigint" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>
