@@ -53,11 +53,9 @@
     <Compile Include="DAOFactory.cs" />
     <Compile Include="DAO\DogadjajDAO.cs" />
     <Compile Include="DAO\PitanjeDAO.cs" />
-    <Compile Include="DAO\StudentDAO.cs" />
     <Compile Include="DAO\TiketDAO.cs" />
     <Compile Include="Entiteti\Dogadjaj.cs" />
     <Compile Include="Entiteti\Pitanje.cs" />
-    <Compile Include="Entiteti\Student.cs" />
     <Compile Include="Entiteti\Tiket.cs" />
     <Compile Include="Interfejsi\IDaoCrud.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

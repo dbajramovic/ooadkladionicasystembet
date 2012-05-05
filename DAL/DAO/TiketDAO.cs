@@ -13,15 +13,21 @@ namespace DAL
         public class TiketDAO : IDaoCrud<Tiket>
         {
             #region IDaoCrud<Tiket> Members
-            protected MySqlCommand c;
+            protected MySqlCommand c1,c2;
 
             public long create(Tiket entity)
             {
+                int brojac = 0;
                 try
                 {
-                    c = new MySqlCommand("insert into tiketi values ('" + Convert.ToString(entity.Datum) + "','" + Convert.ToString(entity.Da_Li_Je_Clan_Uplatio) + "','" + Convert.ToString(entity.Uplata) + "','" + Convert.ToString(entity.Dobitak) + "')", con);
-                    c.ExecuteNonQuery();
-                    return c.LastInsertedId;
+                    c1 = new MySqlCommand("INSERT INTO tiketi (Datum,Clan,Uplata,Dobitak) VALUES ('" + Convert.ToString(entity.Datum) + "','" + Convert.ToString(entity.Da_Li_Je_Clan_Uplatio) + "','" + entity.Uplata + "','" + entity.Dobitak + "')", con);
+                    c1.ExecuteNonQuery();
+                    foreach (Dogadjaj d in entity.Dogadjaji)
+                    {
+                        c2 = new MySqlCommand("INSERT INTO tikdog (IDTiketa,IDDogadjaja) VALUES ('" + entity.ID_Tiketa + "','" + entity.Dogadjaji[brojac].Id + "')", con);
+                        brojac++;
+                    }
+                    return c1.LastInsertedId;
                 }
                 catch (Exception e)
                 {
@@ -33,11 +39,17 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("select * from tiketi", con);
-                    MySqlDataReader r = c.ExecuteReader();
+                    c1 = new MySqlCommand("select * from tiketi", con);
+                    MySqlDataReader r = c1.ExecuteReader();
                     List<Tiket> tiketi = new List<Tiket>();
                     while (r.Read())
-                        tiketi.Add(new Tiket(r.GetDateTime("datum"), r.GetBoolean("clanski_broj"), r.GetDouble("uplata"), r.GetDouble("dobitak")));
+                    {
+                        Tiket t = new Tiket(r.GetDateTime("datum"));
+                        t.Dobitak = r.GetDouble("Dobitak");
+                        t.Uplata = r.GetDouble("Uplata");
+                        t.Da_Li_Je_Clan_Uplatio = r.GetBoolean("Clan");
+                        tiketi.Add(t);
+                    }
                     return tiketi;
                 }
                 catch (Exception e)

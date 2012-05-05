@@ -37,8 +37,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.b_pretraga = new System.Windows.Forms.Button();
             this.c_clan = new System.Windows.Forms.CheckBox();
+            this.n_ulog_1 = new System.Windows.Forms.NumericUpDown();
+            this.n_ulog_2 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_ulog_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_ulog_2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -86,6 +93,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Stvori Tiket";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // t_pretraga
             // 
@@ -105,7 +113,7 @@
             // 
             // b_pretraga
             // 
-            this.b_pretraga.Location = new System.Drawing.Point(151, 5);
+            this.b_pretraga.Location = new System.Drawing.Point(151, 3);
             this.b_pretraga.Name = "b_pretraga";
             this.b_pretraga.Size = new System.Drawing.Size(98, 23);
             this.b_pretraga.TabIndex = 12;
@@ -124,11 +132,68 @@
             this.c_clan.UseVisualStyleBackColor = true;
             this.c_clan.CheckedChanged += new System.EventHandler(this.c_clan_CheckedChanged);
             // 
+            // n_ulog_1
+            // 
+            this.n_ulog_1.Location = new System.Drawing.Point(360, 5);
+            this.n_ulog_1.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.n_ulog_1.Name = "n_ulog_1";
+            this.n_ulog_1.Size = new System.Drawing.Size(95, 20);
+            this.n_ulog_1.TabIndex = 14;
+            // 
+            // n_ulog_2
+            // 
+            this.n_ulog_2.Location = new System.Drawing.Point(476, 5);
+            this.n_ulog_2.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.n_ulog_2.Name = "n_ulog_2";
+            this.n_ulog_2.Size = new System.Drawing.Size(45, 20);
+            this.n_ulog_2.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(319, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Ulog :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(527, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "KM";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(457, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 20);
+            this.label4.TabIndex = 18;
+            this.label4.Text = ".";
+            // 
             // UnosTiketa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 398);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.n_ulog_2);
+            this.Controls.Add(this.n_ulog_1);
             this.Controls.Add(this.c_clan);
             this.Controls.Add(this.b_pretraga);
             this.Controls.Add(this.label1);
@@ -143,6 +208,8 @@
             this.Load += new System.EventHandler(this.UnosTiketa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_ulog_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_ulog_2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +235,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button b_pretraga;
         private System.Windows.Forms.CheckBox c_clan;
+        private System.Windows.Forms.NumericUpDown n_ulog_1;
+        private System.Windows.Forms.NumericUpDown n_ulog_2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
