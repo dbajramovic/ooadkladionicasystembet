@@ -13,14 +13,13 @@ namespace DAL.Entiteti
         DateTime datum;
         bool je_li_clan_uplatio;
         List<Dogadjaj> dogadjaji = new List<Dogadjaj>();
+        List<int> lista_tipova = new List<int>();
         double uplata;
         double dobitak;
-        public Tiket(DateTime d, bool clan, double u, double dob)
+        public Tiket(DateTime d)
         {
             datum = d;
-            je_li_clan_uplatio = clan;
-            uplata = u;
-            dobitak = dob;
+            je_li_clan_uplatio = false;
         }
         ~Tiket() { }
         public long ID_Tiketa
@@ -47,6 +46,26 @@ namespace DAL.Entiteti
         {
             get { return dobitak; }
             set { dobitak = value; }
+        }
+        public void DodajDogadjaj(Dogadjaj d,int tip)
+        {
+            foreach (Dogadjaj a in dogadjaji)
+            {
+                if (a.Id == d.Id) throw new Exception("Događaj već dodan!");
+            }
+            if (Convert.ToDateTime(d.DatumOdrzavanja) < DateTime.Now) throw new Exception("Događaj već prošao!");
+            dogadjaji.Add(d);
+            lista_tipova.Add(tip);
+        }
+        public List<Dogadjaj> Dogadjaji
+        {
+            get { return dogadjaji; }
+            set { dogadjaji = value; }
+        }
+        public List<int> ListaTipova
+        {
+            get { return lista_tipova; }
+            set { lista_tipova = value; }
         }
     }
 }

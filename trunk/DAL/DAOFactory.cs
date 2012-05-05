@@ -28,10 +28,6 @@ namespace DAL
 
             private DAOFactory() { }
 
-            public StudentDAO getStudentDAO()
-            {
-                return new StudentDAO();
-            }
             public DogadjajDAO getDogadjajDAO()
             {
                 return new DogadjajDAO();

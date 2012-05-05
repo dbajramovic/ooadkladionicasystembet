@@ -14,6 +14,7 @@ namespace GUI
     {
         List<Dogadjaj> ld1 = new List<Dogadjaj>();
         List<Dogadjaj> ld2;
+        Tiket novi_tiket = new Tiket(DateTime.Now);
         public UnosTiketa()
         {
             InitializeComponent();
@@ -79,6 +80,8 @@ namespace GUI
             ld1.Add(d);
             dataGridView2.DataSource = null;
             dataGridView2.DataSource = ld1;
+            PotvrdaTipa pt = new PotvrdaTipa(novi_tiket,d);
+            pt.Show();
             }
             catch (Exception aad)
             {
@@ -124,6 +127,35 @@ namespace GUI
                 OdabirClana oc = new OdabirClana();
                 oc.Show();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double dobitak=0,ulog = Convert.ToDouble(n_ulog_1.Value)+(Convert.ToDouble(n_ulog_2.Value)*0.01);
+            int brojac = 0;
+            foreach (Dogadjaj a in novi_tiket.Dogadjaji)
+            {
+                if (novi_tiket.ListaTipova[brojac] == 1) dobitak += novi_tiket.Dogadjaji[brojac].Kvota_1;
+                if (novi_tiket.ListaTipova[brojac] == 0) dobitak += novi_tiket.Dogadjaji[brojac].Kvota_X;
+                if (novi_tiket.ListaTipova[brojac] == 2) dobitak += novi_tiket.Dogadjaji[brojac].Kvota_2;
+                if (novi_tiket.ListaTipova[brojac] == 10) dobitak += novi_tiket.Dogadjaji[brojac].Kvota_1X;
+                if (novi_tiket.ListaTipova[brojac] == 20) dobitak += novi_tiket.Dogadjaji[brojac].Kvota_X2;
+                if (novi_tiket.ListaTipova[brojac] == 12) dobitak += novi_tiket.Dogadjaji[brojac].Kvota_12;
+            }
+            dobitak *= ulog;
+            if (c_clan.Checked == true)
+            {
+                dobitak *= 1.20;
+                novi_tiket.Da_Li_Je_Clan_Uplatio = true;
+            }
+            novi_tiket.Dobitak = dobitak;
+            novi_tiket.Uplata = ulog;
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju("localhost", "kladionica", "root", "");
+            DAL.DAL.TiketDAO tt = d.getDAO.getTiketDAO();
+            novi_tiket.ID_Tiketa = tt.create(novi_tiket);
+            d.terminirajKonekciju();
+            MessageBox.Show("Tiket uspješno stvoren!");
         }
     }
 }

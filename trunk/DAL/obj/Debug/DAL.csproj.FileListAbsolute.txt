@@ -1,8 +1,3 @@
-C:\Users\DebilMC\Desktop\OOADTest\DAL\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\DebilMC\Desktop\OOADTest\DAL\bin\Debug\DAL.dll
-C:\Users\DebilMC\Desktop\OOADTest\DAL\bin\Debug\DAL.pdb
-C:\Users\DebilMC\Desktop\OOADTest\DAL\obj\Debug\DAL.dll
-C:\Users\DebilMC\Desktop\OOADTest\DAL\obj\Debug\DAL.pdb
 C:\Users\DebilMC\Desktop\New folder\DAL\bin\Debug\DAL.dll
 C:\Users\DebilMC\Desktop\New folder\DAL\bin\Debug\DAL.pdb
 C:\Users\DebilMC\Desktop\New folder\DAL\obj\Debug\ResolveAssemblyReference.cache
@@ -18,3 +13,8 @@ C:\Users\User\Desktop\New folder (2)\DAL\bin\Debug\DAL.pdb
 C:\Users\User\Desktop\New folder (2)\DAL\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\User\Desktop\New folder (2)\DAL\obj\Debug\DAL.dll
 C:\Users\User\Desktop\New folder (2)\DAL\obj\Debug\DAL.pdb
+C:\Users\DebilMC\Desktop\OOADTest\DAL\bin\Debug\DAL.dll
+C:\Users\DebilMC\Desktop\OOADTest\DAL\bin\Debug\DAL.pdb
+C:\Users\DebilMC\Desktop\OOADTest\DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DebilMC\Desktop\OOADTest\DAL\obj\Debug\DAL.dll
+C:\Users\DebilMC\Desktop\OOADTest\DAL\obj\Debug\DAL.pdb
