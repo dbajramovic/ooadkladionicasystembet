@@ -36,6 +36,10 @@ namespace DAL
             {
                 return new DogadjajDAO();
             }
+            public TiketDAO getTiketDAO()
+            {
+                return new TiketDAO();
+            }
         }
     }
 }
