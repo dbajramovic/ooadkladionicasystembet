@@ -36,6 +36,18 @@ namespace DAL
             {
                 return new TiketDAO();
             }
+            public OsobaDAO getOsobaDAO()
+            {
+                return new OsobaDAO();
+            }
+            public ClanDAO getClanDAO()
+            {
+                return new ClanDAO();
+            }
+            public UposlenikDAO getUposlenikDAO()
+            {
+                return new UposlenikDAO();
+            }
         }
     }
 }
