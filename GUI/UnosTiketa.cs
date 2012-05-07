@@ -156,6 +156,7 @@ namespace GUI
             novi_tiket.ID_Tiketa = tt.create(novi_tiket);
             d.terminirajKonekciju();
             MessageBox.Show("Tiket uspješno stvoren!");
+            this.Close();
         }
     }
 }

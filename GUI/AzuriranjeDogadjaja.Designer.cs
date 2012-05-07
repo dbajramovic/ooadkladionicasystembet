@@ -33,6 +33,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.n_rezultat = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
+            this.b_odustani = new System.Windows.Forms.Button();
+            this.b_dodaj = new System.Windows.Forms.Button();
             this.t_ime_prvog_ucesnika = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.n_satnica_m = new System.Windows.Forms.NumericUpDown();
@@ -80,8 +82,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.t_imedrugogucesnika = new System.Windows.Forms.TextBox();
             this.t_imeprvogucesnika = new System.Windows.Forms.TextBox();
-            this.b_odustani = new System.Windows.Forms.Button();
-            this.b_dodaj = new System.Windows.Forms.Button();
             this.t_s_id_dogadjaja = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.b_search = new System.Windows.Forms.Button();
@@ -195,6 +195,26 @@
             this.label13.Size = new System.Drawing.Size(109, 13);
             this.label13.TabIndex = 37;
             this.label13.Text = "Ime Prvog Ucesnika: ";
+            // 
+            // b_odustani
+            // 
+            this.b_odustani.Location = new System.Drawing.Point(246, 298);
+            this.b_odustani.Name = "b_odustani";
+            this.b_odustani.Size = new System.Drawing.Size(216, 52);
+            this.b_odustani.TabIndex = 29;
+            this.b_odustani.Text = "Odustani";
+            this.b_odustani.UseVisualStyleBackColor = true;
+            this.b_odustani.Click += new System.EventHandler(this.b_odustani_Click);
+            // 
+            // b_dodaj
+            // 
+            this.b_dodaj.Location = new System.Drawing.Point(6, 298);
+            this.b_dodaj.Name = "b_dodaj";
+            this.b_dodaj.Size = new System.Drawing.Size(225, 52);
+            this.b_dodaj.TabIndex = 28;
+            this.b_dodaj.Text = "Promijeni";
+            this.b_dodaj.UseVisualStyleBackColor = true;
+            this.b_dodaj.Click += new System.EventHandler(this.b_dodaj_Click);
             // 
             // t_ime_prvog_ucesnika
             // 
@@ -750,26 +770,6 @@
             this.t_imeprvogucesnika.Name = "t_imeprvogucesnika";
             this.t_imeprvogucesnika.Size = new System.Drawing.Size(344, 20);
             this.t_imeprvogucesnika.TabIndex = 18;
-            // 
-            // b_odustani
-            // 
-            this.b_odustani.Location = new System.Drawing.Point(246, 298);
-            this.b_odustani.Name = "b_odustani";
-            this.b_odustani.Size = new System.Drawing.Size(216, 52);
-            this.b_odustani.TabIndex = 29;
-            this.b_odustani.Text = "Odustani";
-            this.b_odustani.UseVisualStyleBackColor = true;
-            this.b_odustani.Click += new System.EventHandler(this.b_odustani_Click);
-            // 
-            // b_dodaj
-            // 
-            this.b_dodaj.Location = new System.Drawing.Point(6, 298);
-            this.b_dodaj.Name = "b_dodaj";
-            this.b_dodaj.Size = new System.Drawing.Size(225, 52);
-            this.b_dodaj.TabIndex = 28;
-            this.b_dodaj.Text = "Dodaj";
-            this.b_dodaj.UseVisualStyleBackColor = true;
-            this.b_dodaj.Click += new System.EventHandler(this.b_dodaj_Click);
             // 
             // t_s_id_dogadjaja
             // 
