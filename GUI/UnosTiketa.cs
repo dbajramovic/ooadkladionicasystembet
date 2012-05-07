@@ -12,6 +12,7 @@ namespace GUI
 {
     public partial class UnosTiketa : Form
     {
+        Boolean potvrdi = false;
         List<Dogadjaj> ld1 = new List<Dogadjaj>();
         List<Dogadjaj> ld2;
         Tiket novi_tiket = new Tiket(DateTime.Now);
@@ -23,7 +24,6 @@ namespace GUI
 
         private void UnosTiketa_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'kladionicaDataSet.dogadjaji' table. You can move, or remove it, as needed.
             DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("localhost", "kladionica", "root", "");
                 DAL.DAL.DogadjajDAO dd = d.getDAO.getDogadjajDAO();
@@ -124,7 +124,7 @@ namespace GUI
         {
             if (c_clan.Checked == true)
             {
-                OdabirClana oc = new OdabirClana();
+                OdabirClana oc = new OdabirClana(potvrdi);
                 oc.Show();
             }
         }
@@ -157,6 +157,11 @@ namespace GUI
             d.terminirajKonekciju();
             MessageBox.Show("Tiket uspješno stvoren!");
             this.Close();
+        }
+
+        private void UnosTiketa_Enter(object sender, EventArgs e)
+        {
+            if (potvrdi) c_clan.Checked = true;
         }
     }
 }

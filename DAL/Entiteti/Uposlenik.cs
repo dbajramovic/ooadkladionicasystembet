@@ -5,16 +5,13 @@ using System.Text;
 
 namespace DAL.Entiteti
 {
-    public class Uposlenik/*: Osoba*/
+    public class Uposlenik: Osoba
     {
-        double IDUposlenika;
+        long iduposlenika;
         String password;
 
-        public Uposlenik(/*String i, String j,*/ double u, String pass)
+        public Uposlenik(String i, String j, String pass) : base(i,j)
         {
-            /* ImePrezime = i;
-             JMBG = j;*/
-            IDUposlenika = u;
             password = pass;
         }
         ~Uposlenik() { }
@@ -25,10 +22,10 @@ namespace DAL.Entiteti
             set { password = value; }
         }
 
-        public double UposlenikID
+        public long IDUposlenika
         {
-            get { return IDUposlenika; }
-            set { IDUposlenika = value; }
+            get { return iduposlenika; }
+            set { iduposlenika = value; }
         }
     }
 }

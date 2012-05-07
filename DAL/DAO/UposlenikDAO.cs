@@ -19,7 +19,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("insert into uposlenik values ('" + entity.UposlenikID + "','" + entity.Password + "')", con);
+                    c = new MySqlCommand("INSERT INTO uposlenik (ImePrezime,JMBG,Password) VALUES ('" + entity.ImePrezime + "','"+entity.Jmbg+"','" + entity.Password + "')", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -37,7 +37,11 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Uposlenik> uposlenici = new List<Uposlenik>();
                     while (r.Read())
-                        uposlenici.Add(new Uposlenik(r.GetDouble("ID uposlenika"), r.GetString("Password")));
+                    {
+                        Uposlenik u = new Uposlenik(r.GetString("ImePrezime"),r.GetString("JMBG"),r.GetString("Password"));
+                        u.IDUposlenika = r.GetInt32("IDUposlenik");
+                        uposlenici.Add(u);
+                    }
                     return uposlenici;
                 }
                 catch (Exception e)

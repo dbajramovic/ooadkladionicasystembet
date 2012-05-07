@@ -7,18 +7,18 @@ namespace DAL.Entiteti
 {
     public class Osoba
     {
-        String ImePrezime;
+        String imeprezime;
         String JMBG;
         public Osoba(String i, String j)
         {
-            ImePrezime = i;
+            imeprezime = i;
             JMBG = j;
         }
 
-        public String Ime
+        public String ImePrezime
         {
-            get { return ImePrezime; }
-            set { ImePrezime = value; }
+            get { return imeprezime; }
+            set { imeprezime = value; }
         }
 
         public String Jmbg

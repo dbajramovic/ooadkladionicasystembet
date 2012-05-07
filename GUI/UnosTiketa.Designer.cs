@@ -206,6 +206,7 @@
             this.Name = "UnosTiketa";
             this.Text = "Unos Tiketa";
             this.Load += new System.EventHandler(this.UnosTiketa_Load);
+            this.Enter += new System.EventHandler(this.UnosTiketa_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_ulog_1)).EndInit();
