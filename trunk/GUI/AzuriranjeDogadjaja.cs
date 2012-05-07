@@ -152,12 +152,14 @@ namespace GUI
             rezultat.Kvota_X2 = kvotax2;
             rezultat.Kvota_12 = kvota12;
             rezultat.Rezultat = Convert.ToInt32(n_rezultat.Value);
+            rezultat.DatumOdrzavanja = Convert.ToString(dtp_do.Value);
             DAL.DAL d = DAL.DAL.Instanca;
             d.kreirajKonekciju("localhost", "kladionica", "root", "");
             DAL.DAL.DogadjajDAO dd = d.getDAO.getDogadjajDAO();
             Dogadjaj temp = dd.update(rezultat);
             MessageBox.Show("Događaj promijenjen!");
             d.terminirajKonekciju();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
