@@ -5,15 +5,10 @@ using System.Text;
 
 namespace DAL.Entiteti
 {
-    public class Clan /*: Osoba */
+    public class Clan :  Osoba 
     {
         double IDClana;
-        public Clan(double id/*, String i, String j*/)
-        {
-            IDClana = id;
-            /*ImePrezime = i;
-            JMBG = j;*/
-        }
+        public Clan(String i, String j)  : base(i,j)  { }
         ~Clan() { }
 
         public double DajIDClana

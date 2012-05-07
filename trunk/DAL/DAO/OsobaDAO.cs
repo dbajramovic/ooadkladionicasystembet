@@ -19,7 +19,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("insert into osoba values ('" + entity.Ime + "','" + entity.Jmbg + "')", con);
+                    c = new MySqlCommand("insert into osoba values ('" + entity.ImePrezime + "','" + entity.Jmbg + "')", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }

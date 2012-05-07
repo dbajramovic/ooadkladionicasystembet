@@ -19,7 +19,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("insert into clan values ('" + entity.DajIDClana + "')", con);
+                    c = new MySqlCommand("INSERT INTO clan (ImePrezime,JMBG) VALUES ('" + entity.ImePrezime+ "','"+entity.Jmbg+"')", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -37,7 +37,11 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Clan> clanovi = new List<Clan>();
                     while (r.Read())
-                        clanovi.Add(new Clan(r.GetDouble("id")));
+                    {
+                        Clan f = new Clan(r.GetString("ImePrezime"), r.GetString("JMBG"));
+                        f.DajIDClana=r.GetInt32("IDClana");
+                        clanovi.Add(f);
+                    }
                     return clanovi;
                 }
                 catch (Exception e)
@@ -64,7 +68,13 @@ namespace DAL
 
             public Clan getById(int id)
             {
-                throw new NotImplementedException();
+                c = new MySqlCommand("SELECT * from clan WHERE IdClana='" + id + "'", con);
+                MySqlDataReader r = c.ExecuteReader();
+                r.Read();
+                Clan cla = new Clan(r.GetString("ImePrezime"), r.GetString("JMBG"));
+                cla.DajIDClana = r.GetInt32("IDClana");
+                r.Close();
+                return cla;
             }
 
             public List<Clan> getByExample(string name, string value)
