@@ -68,7 +68,13 @@ namespace DAL
 
             public Uposlenik getById(int id)
             {
-                throw new NotImplementedException();
+                c = new MySqlCommand("SELECT * from uposlenik WHERE IdUposlenik='" + id + "'", con);
+                MySqlDataReader r = c.ExecuteReader();
+                r.Read();
+                Uposlenik cla = new Uposlenik(r.GetString("ImePrezime"), r.GetString("JMBG"),r.GetString("Password"));
+                cla.IDUposlenika = r.GetInt32("IDUposlenik");
+                r.Close();
+                return cla;
             }
 
             public List<Uposlenik> getByExample(string name, string value)
