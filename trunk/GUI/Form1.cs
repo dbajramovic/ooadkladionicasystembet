@@ -73,5 +73,11 @@ namespace GUI
             ProvjeraDobitka pd = new ProvjeraDobitka();
             pd.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            UredjivanjeZaposlenika uz = new UredjivanjeZaposlenika();
+            uz.Show();
+        }
     }
 }

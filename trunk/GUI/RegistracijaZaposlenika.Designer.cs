@@ -67,6 +67,7 @@
             // 
             this.mt_z_pass1.Location = new System.Drawing.Point(73, 90);
             this.mt_z_pass1.Name = "mt_z_pass1";
+            this.mt_z_pass1.PasswordChar = '%';
             this.mt_z_pass1.Size = new System.Drawing.Size(204, 20);
             this.mt_z_pass1.TabIndex = 4;
             // 
@@ -74,6 +75,7 @@
             // 
             this.mt_z_pass2.Location = new System.Drawing.Point(126, 116);
             this.mt_z_pass2.Name = "mt_z_pass2";
+            this.mt_z_pass2.PasswordChar = '%';
             this.mt_z_pass2.Size = new System.Drawing.Size(150, 20);
             this.mt_z_pass2.TabIndex = 5;
             // 
