@@ -28,178 +28,237 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.b_unos_d = new System.Windows.Forms.Button();
-            this.b_stvaranje_t = new System.Windows.Forms.Button();
-            this.b_registracija_c = new System.Windows.Forms.Button();
-            this.b_registracija_z = new System.Windows.Forms.Button();
-            this.b_izlaz = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.programToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izađiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.događajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.osobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.članaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uposlenikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urediToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.događajToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.osobuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.članaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.uposlenikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.provjeraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dobitkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printajPonuduToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.snimiProdajuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printajPonuduToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // b_unos_d
+            // menuStrip1
             // 
-            this.b_unos_d.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_unos_d.Location = new System.Drawing.Point(74, 22);
-            this.b_unos_d.Name = "b_unos_d";
-            this.b_unos_d.Size = new System.Drawing.Size(225, 48);
-            this.b_unos_d.TabIndex = 0;
-            this.b_unos_d.Text = "Unos Događaja";
-            this.b_unos_d.UseVisualStyleBackColor = true;
-            this.b_unos_d.Click += new System.EventHandler(this.b_unos_d_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.programToolStripMenuItem,
+            this.dodajToolStripMenuItem,
+            this.urediToolStripMenuItem,
+            this.provjeraToolStripMenuItem,
+            this.printajPonuduToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(609, 24);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // b_stvaranje_t
+            // programToolStripMenuItem
             // 
-            this.b_stvaranje_t.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_stvaranje_t.Location = new System.Drawing.Point(305, 22);
-            this.b_stvaranje_t.Name = "b_stvaranje_t";
-            this.b_stvaranje_t.Size = new System.Drawing.Size(225, 48);
-            this.b_stvaranje_t.TabIndex = 1;
-            this.b_stvaranje_t.Text = "Stvaranje Tiketa";
-            this.b_stvaranje_t.UseVisualStyleBackColor = true;
-            this.b_stvaranje_t.Click += new System.EventHandler(this.b_stvaranje_t_Click);
+            this.programToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.izađiToolStripMenuItem});
+            this.programToolStripMenuItem.Name = "programToolStripMenuItem";
+            this.programToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.programToolStripMenuItem.Text = "Program...";
             // 
-            // b_registracija_c
+            // izađiToolStripMenuItem
             // 
-            this.b_registracija_c.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_registracija_c.Location = new System.Drawing.Point(305, 74);
-            this.b_registracija_c.Name = "b_registracija_c";
-            this.b_registracija_c.Size = new System.Drawing.Size(225, 50);
-            this.b_registracija_c.TabIndex = 2;
-            this.b_registracija_c.Text = "Registracija Člana";
-            this.b_registracija_c.UseVisualStyleBackColor = true;
-            this.b_registracija_c.Click += new System.EventHandler(this.b_registracija_c_Click);
+            this.izađiToolStripMenuItem.Name = "izađiToolStripMenuItem";
+            this.izađiToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.izađiToolStripMenuItem.Text = "Izađi";
+            this.izađiToolStripMenuItem.Click += new System.EventHandler(this.izađiToolStripMenuItem_Click);
             // 
-            // b_registracija_z
+            // dodajToolStripMenuItem
             // 
-            this.b_registracija_z.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_registracija_z.Location = new System.Drawing.Point(74, 130);
-            this.b_registracija_z.Name = "b_registracija_z";
-            this.b_registracija_z.Size = new System.Drawing.Size(225, 51);
-            this.b_registracija_z.TabIndex = 3;
-            this.b_registracija_z.Text = "Registracija Zaposlenika";
-            this.b_registracija_z.UseVisualStyleBackColor = true;
-            this.b_registracija_z.Click += new System.EventHandler(this.b_registracija_z_Click);
+            this.dodajToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.događajToolStripMenuItem,
+            this.tiketToolStripMenuItem,
+            this.osobuToolStripMenuItem});
+            this.dodajToolStripMenuItem.Name = "dodajToolStripMenuItem";
+            this.dodajToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.dodajToolStripMenuItem.Text = "Dodaj...";
             // 
-            // b_izlaz
+            // događajToolStripMenuItem
             // 
-            this.b_izlaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_izlaz.Location = new System.Drawing.Point(74, 299);
-            this.b_izlaz.Name = "b_izlaz";
-            this.b_izlaz.Size = new System.Drawing.Size(456, 56);
-            this.b_izlaz.TabIndex = 4;
-            this.b_izlaz.Text = "Izlaz";
-            this.b_izlaz.UseVisualStyleBackColor = true;
-            this.b_izlaz.Click += new System.EventHandler(this.b_izlaz_Click);
+            this.događajToolStripMenuItem.Name = "događajToolStripMenuItem";
+            this.događajToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.događajToolStripMenuItem.Text = "Događaj";
+            this.događajToolStripMenuItem.Click += new System.EventHandler(this.događajToolStripMenuItem_Click);
             // 
-            // button1
+            // tiketToolStripMenuItem
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(74, 76);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 48);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Uređivanje Događaja";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.tiketToolStripMenuItem.Name = "tiketToolStripMenuItem";
+            this.tiketToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.tiketToolStripMenuItem.Text = "Tiket";
+            this.tiketToolStripMenuItem.Click += new System.EventHandler(this.tiketToolStripMenuItem_Click);
             // 
-            // button2
+            // osobuToolStripMenuItem
             // 
-            this.button2.Font = new System.Drawing.Font("Pretendo", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(74, 187);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 51);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Kviz";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.osobuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.članaToolStripMenuItem,
+            this.uposlenikaToolStripMenuItem});
+            this.osobuToolStripMenuItem.Name = "osobuToolStripMenuItem";
+            this.osobuToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.osobuToolStripMenuItem.Text = "Osobu";
             // 
-            // button3
+            // članaToolStripMenuItem
             // 
-            this.button3.Font = new System.Drawing.Font("Pretendo", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(305, 187);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(225, 51);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Kviz - Unos Pitanja";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.članaToolStripMenuItem.Name = "članaToolStripMenuItem";
+            this.članaToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.članaToolStripMenuItem.Text = "Člana";
+            this.članaToolStripMenuItem.Click += new System.EventHandler(this.članaToolStripMenuItem_Click);
             // 
-            // button4
+            // uposlenikaToolStripMenuItem
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(306, 130);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(224, 51);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Provjera Dobitka";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.uposlenikaToolStripMenuItem.Name = "uposlenikaToolStripMenuItem";
+            this.uposlenikaToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.uposlenikaToolStripMenuItem.Text = "Uposlenika";
+            this.uposlenikaToolStripMenuItem.Click += new System.EventHandler(this.uposlenikaToolStripMenuItem_Click);
             // 
-            // button5
+            // urediToolStripMenuItem
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(74, 244);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(225, 51);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Uređivanje Člana";
-            this.button5.UseVisualStyleBackColor = true;
+            this.urediToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.događajToolStripMenuItem1,
+            this.osobuToolStripMenuItem1});
+            this.urediToolStripMenuItem.Name = "urediToolStripMenuItem";
+            this.urediToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.urediToolStripMenuItem.Text = "Uredi...";
             // 
-            // button6
+            // događajToolStripMenuItem1
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(306, 244);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(225, 50);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Uređivanje Zaposlenika";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.događajToolStripMenuItem1.Name = "događajToolStripMenuItem1";
+            this.događajToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
+            this.događajToolStripMenuItem1.Text = "Događaj";
+            this.događajToolStripMenuItem1.Click += new System.EventHandler(this.događajToolStripMenuItem1_Click);
+            // 
+            // osobuToolStripMenuItem1
+            // 
+            this.osobuToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.članaToolStripMenuItem1,
+            this.uposlenikToolStripMenuItem});
+            this.osobuToolStripMenuItem1.Name = "osobuToolStripMenuItem1";
+            this.osobuToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
+            this.osobuToolStripMenuItem1.Text = "Osobu";
+            // 
+            // članaToolStripMenuItem1
+            // 
+            this.članaToolStripMenuItem1.Name = "članaToolStripMenuItem1";
+            this.članaToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.članaToolStripMenuItem1.Text = "Člana";
+            this.članaToolStripMenuItem1.Click += new System.EventHandler(this.članaToolStripMenuItem1_Click);
+            // 
+            // uposlenikToolStripMenuItem
+            // 
+            this.uposlenikToolStripMenuItem.Name = "uposlenikToolStripMenuItem";
+            this.uposlenikToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.uposlenikToolStripMenuItem.Text = "Uposlenik";
+            this.uposlenikToolStripMenuItem.Click += new System.EventHandler(this.uposlenikToolStripMenuItem_Click);
+            // 
+            // provjeraToolStripMenuItem
+            // 
+            this.provjeraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dobitkaToolStripMenuItem});
+            this.provjeraToolStripMenuItem.Name = "provjeraToolStripMenuItem";
+            this.provjeraToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.provjeraToolStripMenuItem.Text = "Provjera...";
+            this.provjeraToolStripMenuItem.Click += new System.EventHandler(this.provjeraToolStripMenuItem_Click);
+            // 
+            // dobitkaToolStripMenuItem
+            // 
+            this.dobitkaToolStripMenuItem.Name = "dobitkaToolStripMenuItem";
+            this.dobitkaToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.dobitkaToolStripMenuItem.Text = "Dobitka";
+            this.dobitkaToolStripMenuItem.Click += new System.EventHandler(this.dobitkaToolStripMenuItem_Click);
+            // 
+            // printajPonuduToolStripMenuItem
+            // 
+            this.printajPonuduToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.snimiProdajuToolStripMenuItem,
+            this.printajPonuduToolStripMenuItem1});
+            this.printajPonuduToolStripMenuItem.Name = "printajPonuduToolStripMenuItem";
+            this.printajPonuduToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.printajPonuduToolStripMenuItem.Text = "Ponuda...";
+            this.printajPonuduToolStripMenuItem.Click += new System.EventHandler(this.printajPonuduToolStripMenuItem_Click);
+            // 
+            // snimiProdajuToolStripMenuItem
+            // 
+            this.snimiProdajuToolStripMenuItem.Name = "snimiProdajuToolStripMenuItem";
+            this.snimiProdajuToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.snimiProdajuToolStripMenuItem.Text = "Snimi Prodaju";
+            this.snimiProdajuToolStripMenuItem.Click += new System.EventHandler(this.snimiProdajuToolStripMenuItem_Click);
+            // 
+            // printajPonuduToolStripMenuItem1
+            // 
+            this.printajPonuduToolStripMenuItem1.Name = "printajPonuduToolStripMenuItem1";
+            this.printajPonuduToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.printajPonuduToolStripMenuItem1.Text = "Printaj Ponudu";
+            this.printajPonuduToolStripMenuItem1.Click += new System.EventHandler(this.printajPonuduToolStripMenuItem1_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 367);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.b_izlaz);
-            this.Controls.Add(this.b_registracija_z);
-            this.Controls.Add(this.b_registracija_c);
-            this.Controls.Add(this.b_stvaranje_t);
-            this.Controls.Add(this.b_unos_d);
+            this.ClientSize = new System.Drawing.Size(609, 279);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "SystemBet Kladionica";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button b_unos_d;
-        private System.Windows.Forms.Button b_stvaranje_t;
-        private System.Windows.Forms.Button b_registracija_c;
-        private System.Windows.Forms.Button b_registracija_z;
-        private System.Windows.Forms.Button b_izlaz;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem programToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izađiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem urediToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem provjeraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem događajToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiketToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem osobuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem članaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uposlenikaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem događajToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem osobuToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem članaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem uposlenikToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dobitkaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printajPonuduToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem snimiProdajuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printajPonuduToolStripMenuItem1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
 
