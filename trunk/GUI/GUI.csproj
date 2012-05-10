@@ -130,6 +130,12 @@
     <Compile Include="PotvrdaTipa.Designer.cs">
       <DependentUpon>PotvrdaTipa.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintanjePonude.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintanjePonude.Designer.cs">
+      <DependentUpon>PrintanjePonude.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProvjeraDobitka.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     <EmbeddedResource Include="PotvrdaTipa.resx">
       <DependentUpon>PotvrdaTipa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrintanjePonude.resx">
+      <DependentUpon>PrintanjePonude.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProvjeraDobitka.resx">
       <DependentUpon>ProvjeraDobitka.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +273,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model2.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Properties\DataSources\kladionicaEntities.datasource" />
     <None Include="Properties\DataSources\Model1Container.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

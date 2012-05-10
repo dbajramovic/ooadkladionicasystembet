@@ -109,3 +109,4 @@ C:\Users\Amna\Desktop\amna\GUI\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Amna\Desktop\amna\GUI\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\DebilMC\Desktop\OOADTest\GUI\obj\x86\Debug\GUI.UredjivanjeZaposlenika.resources
 C:\Users\DebilMC\Desktop\OOADTest\GUI\obj\x86\Debug\GUI.UredjivanjeClana.resources
+C:\Users\DebilMC\Desktop\OOADTest\GUI\obj\x86\Debug\GUI.PrintanjePonude.resources

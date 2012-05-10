@@ -12,6 +12,8 @@ namespace GUI
 {
     public partial class UnosDogadjaja : Form
     {
+        List<Ucesnik> lista_ucesnika2 = new List<Ucesnik>();
+        List<Ucesnik> lista_ucesnika1 = new List<Ucesnik>();
         public UnosDogadjaja()
         {
             InitializeComponent();
@@ -144,7 +146,7 @@ namespace GUI
             if (!c_kvota1x.Checked) kvota1x=1.00;
             if (!c_kvotax2.Checked) kvotax2=1.00;
             if (!c_kvota12.Checked) kvota12=1.00;
-            Dogadjaj dog = new Dogadjaj(t_imeprvogucesnika.Text, t_imedrugogucesnika.Text, kvota1, kvotax, kvota2, kvota1x, kvotax2, kvota12,Convert.ToString(dtp_do.Value),Convert.ToInt32(n_satnica_h.Value*100+n_satnica_m.Value));
+            Dogadjaj dog = new Dogadjaj(c_imeprvogucenika.Text, c_imedrugogucesnika.Text, kvota1, kvotax, kvota2, kvota1x, kvotax2, kvota12,Convert.ToString(dtp_do.Value),Convert.ToInt32(n_satnica_h.Value*100+n_satnica_m.Value));
             try
             {
                 DAL.DAL d = DAL.DAL.Instanca;
@@ -165,6 +167,62 @@ namespace GUI
         private void UnosDogadjaja_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void c_imeprvogucenika_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            pictureBox1.ImageLocation = null;
+            Ucesnik tempu = (Ucesnik)c_imeprvogucenika.SelectedItem;
+            if(tempu!=null)
+            pictureBox1.ImageLocation = tempu.Picpath;
+            
+        }
+
+        private void c_imeprvogucenika_TextUpdate(object sender, EventArgs e)
+        {
+            c_imeprvogucenika.DataSource = null;
+            c_imeprvogucenika.Items.Clear();
+            List<string> lista_stringova=new List<string>();
+            lista_ucesnika1 = null;
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju("localhost", "kladionica", "root", "");
+
+            DAL.DAL.UcesnikDAO dd = d.getDAO.getUcesnikDAO();
+            lista_ucesnika1 = dd.getByExample(c_imeprvogucenika.Text, "");
+            d.terminirajKonekciju();
+            c_imeprvogucenika.DataSource = null;
+            foreach (Ucesnik u in lista_ucesnika1)
+            {
+                lista_stringova.Add(u.Ime);
+            }
+            c_imeprvogucenika.DataSource = lista_ucesnika1;
+        }
+
+        private void c_imedrugogucesnika_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pictureBox2.ImageLocation = null;
+            Ucesnik tempu = (Ucesnik)c_imedrugogucesnika.SelectedItem;
+            if (tempu!=null)
+            pictureBox2.ImageLocation = tempu.Picpath;
+        }
+
+        private void c_imedrugogucesnika_TextUpdate(object sender, EventArgs e)
+        {
+            List<string> lista_stringova = new List<string>();
+            lista_ucesnika2 = null;
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju("localhost", "kladionica", "root", "");
+
+            DAL.DAL.UcesnikDAO dd = d.getDAO.getUcesnikDAO();
+            lista_ucesnika2 = dd.getByExample(c_imedrugogucesnika.Text, "");
+            d.terminirajKonekciju();
+            c_imedrugogucesnika.DataSource = null;
+            foreach (Ucesnik u in lista_ucesnika2)
+            {
+                lista_stringova.Add(u.Ime);
+            }
+            c_imedrugogucesnika.DataSource = lista_ucesnika2;
         }
     }
 }

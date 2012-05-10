@@ -48,6 +48,10 @@ namespace DAL
             {
                 return new UposlenikDAO();
             }
+            public UcesnikDAO getUcesnikDAO()
+            {
+                return new UcesnikDAO();
+            }
         }
     }
 }
