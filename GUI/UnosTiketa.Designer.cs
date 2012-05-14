@@ -35,7 +35,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.t_pretraga = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.b_pretraga = new System.Windows.Forms.Button();
             this.c_clan = new System.Windows.Forms.CheckBox();
             this.n_ulog_1 = new System.Windows.Forms.NumericUpDown();
             this.n_ulog_2 = new System.Windows.Forms.NumericUpDown();
@@ -56,6 +55,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(842, 99);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // b_dodaj
             // 
@@ -101,6 +101,7 @@
             this.t_pretraga.Name = "t_pretraga";
             this.t_pretraga.Size = new System.Drawing.Size(100, 20);
             this.t_pretraga.TabIndex = 10;
+            this.t_pretraga.TextChanged += new System.EventHandler(this.t_pretraga_TextChanged);
             // 
             // label1
             // 
@@ -110,16 +111,6 @@
             this.label1.Size = new System.Drawing.Size(24, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "ID :";
-            // 
-            // b_pretraga
-            // 
-            this.b_pretraga.Location = new System.Drawing.Point(151, 3);
-            this.b_pretraga.Name = "b_pretraga";
-            this.b_pretraga.Size = new System.Drawing.Size(98, 23);
-            this.b_pretraga.TabIndex = 12;
-            this.b_pretraga.Text = "Traži po ID-u";
-            this.b_pretraga.UseVisualStyleBackColor = true;
-            this.b_pretraga.Click += new System.EventHandler(this.b_pretraga_Click);
             // 
             // c_clan
             // 
@@ -195,7 +186,6 @@
             this.Controls.Add(this.n_ulog_2);
             this.Controls.Add(this.n_ulog_1);
             this.Controls.Add(this.c_clan);
-            this.Controls.Add(this.b_pretraga);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.t_pretraga);
             this.Controls.Add(this.button2);
@@ -234,7 +224,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kvota12DataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox t_pretraga;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button b_pretraga;
         private System.Windows.Forms.CheckBox c_clan;
         private System.Windows.Forms.NumericUpDown n_ulog_1;
         private System.Windows.Forms.NumericUpDown n_ulog_2;

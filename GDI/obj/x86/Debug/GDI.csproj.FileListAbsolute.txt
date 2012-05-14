@@ -14,3 +14,4 @@ C:\Users\DebilMC\Desktop\New folder (2)\GDI\obj\x86\Debug\GenerateResource.read.
 C:\Users\DebilMC\Desktop\New folder (2)\GDI\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\DebilMC\Desktop\New folder (2)\GDI\obj\x86\Debug\GDI.exe
 C:\Users\DebilMC\Desktop\New folder (2)\GDI\obj\x86\Debug\GDI.pdb
+C:\Users\DebilMC\Desktop\New folder (2)\GDI\obj\x86\Debug\GDI.Form1.resources
