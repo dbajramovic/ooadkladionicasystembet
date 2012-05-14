@@ -13,6 +13,7 @@ namespace GUI
 {
     public partial class RegistracijaZaposlenika : Form
     {
+
         public RegistracijaZaposlenika()
         {
             InitializeComponent();
@@ -46,6 +47,11 @@ namespace GUI
             {
                 MessageBox.Show(gh.Message);
             }
+        }
+
+        private void RegistracijaZaposlenika_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

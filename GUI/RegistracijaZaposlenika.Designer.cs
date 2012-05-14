@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 173);
+            this.ClientSize = new System.Drawing.Size(455, 177);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -164,6 +164,7 @@
             this.Controls.Add(this.t_z_ime);
             this.Name = "RegistracijaZaposlenika";
             this.Text = "Registracija Zaposlenika";
+            this.Load += new System.EventHandler(this.RegistracijaZaposlenika_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -179,5 +179,11 @@ namespace GUI
             xt.Flush();
             xt.Close();
         }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kamera k = new Kamera();
+            k.Show();
+        }
     }
 }
