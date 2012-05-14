@@ -49,6 +49,7 @@
             this.snimiProdajuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printajPonuduToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +60,8 @@
             this.dodajToolStripMenuItem,
             this.urediToolStripMenuItem,
             this.provjeraToolStripMenuItem,
-            this.printajPonuduToolStripMenuItem});
+            this.printajPonuduToolStripMenuItem,
+            this.testToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(609, 24);
@@ -217,6 +219,13 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.testToolStripMenuItem.Text = "Test";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +268,7 @@
         private System.Windows.Forms.ToolStripMenuItem snimiProdajuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printajPonuduToolStripMenuItem1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
     }
 }
 
