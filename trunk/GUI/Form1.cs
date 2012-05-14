@@ -185,5 +185,10 @@ namespace GUI
             Kamera k = new Kamera();
             k.Show();
         }
+
+        private void oProgramuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Kladionica SystemBet by Dado Bajramović,Dino Ahmić,Amna Šukrija 2012");
+        }
     }
 }

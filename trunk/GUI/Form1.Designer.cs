@@ -48,8 +48,9 @@
             this.printajPonuduToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.snimiProdajuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printajPonuduToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.oProgramuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +72,7 @@
             // programToolStripMenuItem
             // 
             this.programToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.oProgramuToolStripMenuItem,
             this.izađiToolStripMenuItem});
             this.programToolStripMenuItem.Name = "programToolStripMenuItem";
             this.programToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
@@ -79,7 +81,7 @@
             // izađiToolStripMenuItem
             // 
             this.izađiToolStripMenuItem.Name = "izađiToolStripMenuItem";
-            this.izađiToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.izađiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.izađiToolStripMenuItem.Text = "Izađi";
             this.izađiToolStripMenuItem.Click += new System.EventHandler(this.izađiToolStripMenuItem_Click);
             // 
@@ -209,6 +211,13 @@
             this.printajPonuduToolStripMenuItem1.Text = "Printaj Ponudu";
             this.printajPonuduToolStripMenuItem1.Click += new System.EventHandler(this.printajPonuduToolStripMenuItem1_Click);
             // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.testToolStripMenuItem.Text = "Test";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
+            // 
             // printPreviewDialog1
             // 
             this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
@@ -219,12 +228,12 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // testToolStripMenuItem
+            // oProgramuToolStripMenuItem
             // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.testToolStripMenuItem.Text = "Test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
+            this.oProgramuToolStripMenuItem.Name = "oProgramuToolStripMenuItem";
+            this.oProgramuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.oProgramuToolStripMenuItem.Text = "O programu";
+            this.oProgramuToolStripMenuItem.Click += new System.EventHandler(this.oProgramuToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -269,6 +278,7 @@
         private System.Windows.Forms.ToolStripMenuItem printajPonuduToolStripMenuItem1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem oProgramuToolStripMenuItem;
     }
 }
 

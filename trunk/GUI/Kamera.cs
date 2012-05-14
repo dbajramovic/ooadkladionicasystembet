@@ -8,8 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
-
-// Reference path for the following assemblies --> C:\Program Files\Microsoft Expression\Encoder 4\SDK\
 using Microsoft.Expression.Encoder.Devices;
 using Microsoft.Expression.Encoder.Live;
 using Microsoft.Expression.Encoder;
@@ -207,20 +205,27 @@ namespace GUI
 
         private void cmdGrabImage_Click(object sender, EventArgs e)
         {
-            // Create a Bitmap of the same dimension of panelVideoPreview (Width x Height)
-            using (Bitmap bitmap = new Bitmap(panelVideoPreview.Width, panelVideoPreview.Height))
+            try
             {
-                using (Graphics g = Graphics.FromImage(bitmap))
+                // Create a Bitmap of the same dimension of panelVideoPreview (Width x Height)
+                using (Bitmap bitmap = new Bitmap(panelVideoPreview.Width, panelVideoPreview.Height))
                 {
-                    // Get the paramters to call g.CopyFromScreen and get the image
-                    Rectangle rectanglePanelVideoPreview = panelVideoPreview.Bounds;
-                    Point sourcePoints = panelVideoPreview.PointToScreen(new Point(panelVideoPreview.ClientRectangle.X, panelVideoPreview.ClientRectangle.Y));
-                    g.CopyFromScreen(sourcePoints, Point.Empty, rectanglePanelVideoPreview.Size);
-                }
+                    using (Graphics g = Graphics.FromImage(bitmap))
+                    {
+                        // Get the paramters to call g.CopyFromScreen and get the image
+                        Rectangle rectanglePanelVideoPreview = panelVideoPreview.Bounds;
+                        Point sourcePoints = panelVideoPreview.PointToScreen(new Point(panelVideoPreview.ClientRectangle.X, panelVideoPreview.ClientRectangle.Y));
+                        g.CopyFromScreen(sourcePoints, Point.Empty, rectanglePanelVideoPreview.Size);
+                    }
 
-                string strGrabFileName = String.Format("C:\\Snapshot_{0:yyyyMMdd_hhmmss}.jpg", DateTime.Now);
-                toolStripStatusLabel1.Text = strGrabFileName;
-                bitmap.Save(strGrabFileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    string strGrabFileName = String.Format("C:\\Snapshot_{0:yyyyMMdd_hhmmss}.jpg", DateTime.Now);
+                    toolStripStatusLabel1.Text = strGrabFileName;
+                    bitmap.Save(strGrabFileName, System.Drawing.Imaging.ImageFormat.Bmp);
+                }
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
             }
         }
 

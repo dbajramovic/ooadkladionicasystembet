@@ -209,7 +209,6 @@ namespace GUI
 
         private void c_imedrugogucesnika_TextUpdate(object sender, EventArgs e)
         {
-            List<string> lista_stringova = new List<string>();
             lista_ucesnika2 = null;
             DAL.DAL d = DAL.DAL.Instanca;
             d.kreirajKonekciju("localhost", "kladionica", "root", "");
@@ -218,10 +217,6 @@ namespace GUI
             lista_ucesnika2 = dd.getByExample(c_imedrugogucesnika.Text, "");
             d.terminirajKonekciju();
             c_imedrugogucesnika.DataSource = null;
-            foreach (Ucesnik u in lista_ucesnika2)
-            {
-                lista_stringova.Add(u.Ime);
-            }
             c_imedrugogucesnika.DataSource = lista_ucesnika2;
         }
     }

@@ -14,7 +14,7 @@ namespace DAL
         public class DogadjajDAO : IDaoCrud<Dogadjaj>
         {
             #region IDaoCrud<Dogadjaj> Members
-            protected MySqlCommand c,u,d;
+            protected MySqlCommand c,u,d,g;
 
             public long create(Dogadjaj entity)
             {
@@ -85,7 +85,17 @@ namespace DAL
 
             public List<Dogadjaj> getByExample(string name, string value)
             {
-                throw new NotImplementedException();
+                List<Dogadjaj> ld = new List<Dogadjaj>();
+                g = new MySqlCommand("SELECT * from dogadjaji WHERE IdDogadjaja LIKE'" + name + "%'", con);
+                MySqlDataReader r = g.ExecuteReader();
+                while (r.Read()) { 
+                Dogadjaj dog = new Dogadjaj(r.GetString("ImePU"), r.GetString("ImeDU"), r.GetDouble("Kvota1"), r.GetDouble("KvotaX"), r.GetDouble("Kvota2"), r.GetDouble("Kvota1X"), r.GetDouble("KvotaX2"), r.GetDouble("Kvota12"), r.GetString("DatumOdrzavanja"), r.GetInt32("SatnicaOdrzavanja"));
+                dog.Rezultat = r.GetInt32("Rezultat");
+                dog.Id = r.GetInt32("IDDogadjaja");
+                ld.Add(dog);
+            }
+                r.Close();
+                return ld;
             }
 
             #endregion
