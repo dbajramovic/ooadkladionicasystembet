@@ -1,0 +1,18 @@
+C:\Users\User\Desktop\Ball Escape\bin\Debug\Ball Escape.exe
+C:\Users\User\Desktop\Ball Escape\bin\Debug\Ball Escape.pdb
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\Ball_Escape.Properties.Resources.resources
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\Ball Escape.exe
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\Ball Escape.pdb
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\Ball_Escape.Igrica.resources
+C:\Users\User\Desktop\Igrica\obj\x86\Debug\Ball Escape.exe
+C:\Users\User\Desktop\Igrica\obj\x86\Debug\Ball Escape.pdb
+C:\Users\User\Desktop\Igrica\bin\Debug\Ball Escape.exe
+C:\Users\User\Desktop\Igrica\bin\Debug\Ball Escape.pdb
+C:\Users\User\Desktop\Igrica\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\User\Desktop\Igrica\obj\x86\Debug\Ball_Escape.Igrica.resources
+C:\Users\User\Desktop\Igrica\obj\x86\Debug\Ball_Escape.Properties.Resources.resources
+C:\Users\User\Desktop\Igrica\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\User\Desktop\Igrica\obj\x86\Debug\GenerateResource.write.1.tlog

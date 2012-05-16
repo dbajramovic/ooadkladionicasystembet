@@ -1,0 +1,31 @@
+c:\users\trubilo\documents\visual studio 2010\Projects\Ball Escape\Ball Escape\bin\Debug\Ball Escape.exe
+c:\users\trubilo\documents\visual studio 2010\Projects\Ball Escape\Ball Escape\bin\Debug\Ball Escape.pdb
+c:\users\trubilo\documents\visual studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\trubilo\documents\visual studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\Ball_Escape.Form1.resources
+c:\users\trubilo\documents\visual studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\Ball_Escape.Properties.Resources.resources
+c:\users\trubilo\documents\visual studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\trubilo\documents\visual studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\trubilo\documents\visual studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\Ball Escape.exe
+c:\users\trubilo\documents\visual studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\Ball Escape.pdb
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\bin\Debug\Ball Escape.exe.manifest
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\bin\Debug\Ball Escape.application
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\bin\Debug\Ball Escape.exe
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\bin\Debug\Ball Escape.pdb
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\Ball_Escape.Form1.resources
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\Ball_Escape.Properties.Resources.resources
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\Ball Escape.exe.manifest
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\Ball Escape.application
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\Ball Escape.exe
+E:\Bakkup\Visual Studio 2010\Projects\Ball Escape\Ball Escape\obj\x86\Debug\Ball Escape.pdb
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\Ball Escape.exe
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\Ball Escape.pdb
+C:\Users\User\Desktop\Ball Escape\bin\Debug\Ball Escape.exe
+C:\Users\User\Desktop\Ball Escape\bin\Debug\Ball Escape.pdb
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\Ball_Escape.Form1.resources
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\Ball_Escape.Properties.Resources.resources
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\User\Desktop\Ball Escape\obj\x86\Debug\GenerateResource.write.1.tlog
