@@ -13,7 +13,7 @@ namespace DAL
         public class ClanDAO : IDaoCrud<Clan>
         {
             #region IDaoCrud<Clan> Members
-            protected MySqlCommand c;
+            protected MySqlCommand c,c1;
 
             public long create(Clan entity)
             {
@@ -38,8 +38,9 @@ namespace DAL
                     List<Clan> clanovi = new List<Clan>();
                     while (r.Read())
                     {
-                        Clan f = new Clan(r.GetString("ImePrezime"), r.GetString("JMBG"));
+                        Clan f = new Clan(r.GetString("ImePrezime"), r.GetString("JMBG"),r.GetString("Picpath"));
                         f.DajIDClana=r.GetInt32("IDClana");
+                        f.Picpath = r.GetString("Picpath");
                         clanovi.Add(f);
                     }
                     return clanovi;
@@ -58,7 +59,9 @@ namespace DAL
 
             public Clan update(Clan entity)
             {
-                throw new NotImplementedException();
+                c1 = new MySqlCommand("UPDATE clan SET ImePrezime= '" + entity.ImePrezime + "',JMBG='" + entity.Jmbg + "','"+entity.Picpath+"' ,PicPatch='"+entity.Picpath+" WHERE  IDClana="+entity.DajIDClana, con);
+                c1.ExecuteNonQuery();
+                return entity;
             }
 
             public void delete(Clan entity)
@@ -71,8 +74,9 @@ namespace DAL
                 c = new MySqlCommand("SELECT * from clan WHERE IdClana='" + id + "'", con);
                 MySqlDataReader r = c.ExecuteReader();
                 r.Read();
-                Clan cla = new Clan(r.GetString("ImePrezime"), r.GetString("JMBG"));
+                Clan cla = new Clan(r.GetString("ImePrezime"), r.GetString("JMBG"),r.GetString("Picpath"));
                 cla.DajIDClana = r.GetInt32("IDClana");
+                cla.Picpath = r.GetString("Picpath");
                 r.Close();
                 return cla;
             }

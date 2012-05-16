@@ -76,6 +76,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.c_imeprvogucenika = new System.Windows.Forms.ComboBox();
             this.c_imedrugogucesnika = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_2)).BeginInit();
@@ -572,7 +573,7 @@
             // 
             // b_dodaj
             // 
-            this.b_dodaj.Location = new System.Drawing.Point(477, 231);
+            this.b_dodaj.Location = new System.Drawing.Point(476, 229);
             this.b_dodaj.Name = "b_dodaj";
             this.b_dodaj.Size = new System.Drawing.Size(94, 31);
             this.b_dodaj.TabIndex = 10;
@@ -582,7 +583,7 @@
             // 
             // b_odustani
             // 
-            this.b_odustani.Location = new System.Drawing.Point(477, 263);
+            this.b_odustani.Location = new System.Drawing.Point(476, 266);
             this.b_odustani.Name = "b_odustani";
             this.b_odustani.Size = new System.Drawing.Size(94, 27);
             this.b_odustani.TabIndex = 11;
@@ -597,7 +598,7 @@
             this.dtp_do.Name = "dtp_do";
             this.dtp_do.Size = new System.Drawing.Size(113, 20);
             this.dtp_do.TabIndex = 12;
-            this.dtp_do.Value = new System.DateTime(2012, 4, 27, 13, 4, 36, 0);
+            this.dtp_do.Value = new System.DateTime(2012, 5, 16, 0, 0, 0, 0);
             // 
             // label9
             // 
@@ -661,7 +662,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(528, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(471, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(104, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -670,6 +671,8 @@
             // 
             // c_imeprvogucenika
             // 
+            this.c_imeprvogucenika.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.c_imeprvogucenika.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c_imeprvogucenika.FormattingEnabled = true;
             this.c_imeprvogucenika.Location = new System.Drawing.Point(124, 45);
             this.c_imeprvogucenika.Name = "c_imeprvogucenika";
@@ -681,18 +684,28 @@
             // c_imedrugogucesnika
             // 
             this.c_imedrugogucesnika.FormattingEnabled = true;
-            this.c_imedrugogucesnika.Location = new System.Drawing.Point(347, 45);
+            this.c_imedrugogucesnika.Location = new System.Drawing.Point(299, 45);
             this.c_imedrugogucesnika.Name = "c_imedrugogucesnika";
             this.c_imedrugogucesnika.Size = new System.Drawing.Size(166, 21);
             this.c_imedrugogucesnika.TabIndex = 21;
             this.c_imedrugogucesnika.SelectedIndexChanged += new System.EventHandler(this.c_imedrugogucesnika_SelectedIndexChanged);
             this.c_imedrugogucesnika.TextUpdate += new System.EventHandler(this.c_imedrugogucesnika_TextUpdate);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(207, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(167, 21);
+            this.comboBox1.TabIndex = 22;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // UnosDogadjaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 307);
+            this.ClientSize = new System.Drawing.Size(582, 307);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.c_imedrugogucesnika);
             this.Controls.Add(this.c_imeprvogucenika);
             this.Controls.Add(this.pictureBox2);
@@ -803,5 +816,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ComboBox c_imeprvogucenika;
         private System.Windows.Forms.ComboBox c_imedrugogucesnika;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

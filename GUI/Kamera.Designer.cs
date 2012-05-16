@@ -34,12 +34,9 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lstVideoDevices = new System.Windows.Forms.ListBox();
             this.lstAudioDevices = new System.Windows.Forms.ListBox();
-            this.btnStartStopRecording = new System.Windows.Forms.Button();
             this.lblVideoDeviceSelectedForPreview = new System.Windows.Forms.Label();
             this.lblAudioDeviceSelectedForPreview = new System.Windows.Forms.Label();
             this.btnGrabImage = new System.Windows.Forms.Button();
-            this.checkBoxShowConfigDialog = new System.Windows.Forms.CheckBox();
-            this.btnBroadcast = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +53,7 @@
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(94, 32);
             this.btnPreview.TabIndex = 1;
-            this.btnPreview.Text = "Preview";
+            this.btnPreview.Text = "Prikaz";
             this.btnPreview.UseVisualStyleBackColor = true;
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
@@ -91,17 +88,6 @@
             this.lstAudioDevices.Size = new System.Drawing.Size(338, 108);
             this.lstAudioDevices.TabIndex = 4;
             // 
-            // btnStartStopRecording
-            // 
-            this.btnStartStopRecording.Enabled = false;
-            this.btnStartStopRecording.Location = new System.Drawing.Point(133, 240);
-            this.btnStartStopRecording.Name = "btnStartStopRecording";
-            this.btnStartStopRecording.Size = new System.Drawing.Size(94, 32);
-            this.btnStartStopRecording.TabIndex = 5;
-            this.btnStartStopRecording.Text = "Start Recording";
-            this.btnStartStopRecording.UseVisualStyleBackColor = true;
-            this.btnStartStopRecording.Click += new System.EventHandler(this.btnStartStopRecording_Click);
-            // 
             // lblVideoDeviceSelectedForPreview
             // 
             this.lblVideoDeviceSelectedForPreview.AutoSize = true;
@@ -127,41 +113,18 @@
             this.btnGrabImage.Name = "btnGrabImage";
             this.btnGrabImage.Size = new System.Drawing.Size(94, 32);
             this.btnGrabImage.TabIndex = 8;
-            this.btnGrabImage.Text = "Grab Image";
+            this.btnGrabImage.Text = "Uslikaj";
             this.btnGrabImage.UseVisualStyleBackColor = true;
             this.btnGrabImage.Click += new System.EventHandler(this.cmdGrabImage_Click);
-            // 
-            // checkBoxShowConfigDialog
-            // 
-            this.checkBoxShowConfigDialog.AutoSize = true;
-            this.checkBoxShowConfigDialog.Location = new System.Drawing.Point(16, 284);
-            this.checkBoxShowConfigDialog.Name = "checkBoxShowConfigDialog";
-            this.checkBoxShowConfigDialog.Size = new System.Drawing.Size(226, 17);
-            this.checkBoxShowConfigDialog.TabIndex = 9;
-            this.checkBoxShowConfigDialog.Text = "Show configuration dialogs before preview";
-            this.checkBoxShowConfigDialog.UseVisualStyleBackColor = true;
-            // 
-            // btnBroadcast
-            // 
-            this.btnBroadcast.Location = new System.Drawing.Point(16, 382);
-            this.btnBroadcast.Name = "btnBroadcast";
-            this.btnBroadcast.Size = new System.Drawing.Size(94, 32);
-            this.btnBroadcast.TabIndex = 10;
-            this.btnBroadcast.Text = "Broadcast";
-            this.btnBroadcast.UseVisualStyleBackColor = true;
-            this.btnBroadcast.Click += new System.EventHandler(this.Broadcast_Click);
             // 
             // Kamera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 532);
-            this.Controls.Add(this.btnBroadcast);
-            this.Controls.Add(this.checkBoxShowConfigDialog);
             this.Controls.Add(this.btnGrabImage);
             this.Controls.Add(this.lblAudioDeviceSelectedForPreview);
             this.Controls.Add(this.lblVideoDeviceSelectedForPreview);
-            this.Controls.Add(this.btnStartStopRecording);
             this.Controls.Add(this.lstAudioDevices);
             this.Controls.Add(this.lstVideoDevices);
             this.Controls.Add(this.statusStrip1);
@@ -169,7 +132,6 @@
             this.Controls.Add(this.panelVideoPreview);
             this.Name = "Kamera";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "How to use a WebCam with Microsoft Expression Encoder 4 and .NET Framework 4.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Kamera_FormClosing);
             this.Load += new System.EventHandler(this.Kamera_Load);
             this.statusStrip1.ResumeLayout(false);
@@ -187,12 +149,9 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ListBox lstVideoDevices;
         private System.Windows.Forms.ListBox lstAudioDevices;
-        private System.Windows.Forms.Button btnStartStopRecording;
         private System.Windows.Forms.Label lblVideoDeviceSelectedForPreview;
         private System.Windows.Forms.Label lblAudioDeviceSelectedForPreview;
         private System.Windows.Forms.Button btnGrabImage;
-        private System.Windows.Forms.CheckBox checkBoxShowConfigDialog;
-        private System.Windows.Forms.Button btnBroadcast;
     }
 }
 

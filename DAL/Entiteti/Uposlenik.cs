@@ -9,10 +9,11 @@ namespace DAL.Entiteti
     {
         long iduposlenika;
         String password;
-
-        public Uposlenik(String i, String j, String pass) : base(i,j)
+        string picpath;
+        public Uposlenik(String i, String j, String pass,string pic) : base(i,j)
         {
             password = pass;
+            picpath = pic;
         }
         ~Uposlenik() { }
 
@@ -26,6 +27,11 @@ namespace DAL.Entiteti
         {
             get { return iduposlenika; }
             set { iduposlenika = value; }
+        }
+        public string Picpath
+        {
+            get { return picpath; }
+            set { picpath = value; }
         }
     }
 }

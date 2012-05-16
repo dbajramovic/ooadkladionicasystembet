@@ -118,3 +118,4 @@ C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.PotvrdaTipa.resour
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.PrintanjePonude.resources
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.UredjivanjeClana.resources
 C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.UredjivanjeZaposlenika.resources
+C:\Users\DebilMC\Desktop\New folder (2)\GUI\obj\x86\Debug\GUI.Kamera.resources

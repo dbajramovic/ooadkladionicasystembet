@@ -40,6 +40,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.Uslikaj = new System.Windows.Forms.Button();
+            this.lstVideoDevices = new System.Windows.Forms.ListBox();
+            this.lstAudioDevices = new System.Windows.Forms.ListBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panelVideoPreview = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // t_z_ime
@@ -145,11 +151,75 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // Uslikaj
+            // 
+            this.Uslikaj.Location = new System.Drawing.Point(40, 142);
+            this.Uslikaj.Name = "Uslikaj";
+            this.Uslikaj.Size = new System.Drawing.Size(75, 23);
+            this.Uslikaj.TabIndex = 15;
+            this.Uslikaj.Text = "Uslikaj";
+            this.Uslikaj.UseVisualStyleBackColor = true;
+            this.Uslikaj.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // lstVideoDevices
+            // 
+            this.lstVideoDevices.FormattingEnabled = true;
+            this.lstVideoDevices.Location = new System.Drawing.Point(40, 171);
+            this.lstVideoDevices.Name = "lstVideoDevices";
+            this.lstVideoDevices.Size = new System.Drawing.Size(239, 43);
+            this.lstVideoDevices.TabIndex = 16;
+            this.lstVideoDevices.Visible = false;
+            // 
+            // lstAudioDevices
+            // 
+            this.lstAudioDevices.FormattingEnabled = true;
+            this.lstAudioDevices.Location = new System.Drawing.Point(41, 220);
+            this.lstAudioDevices.Name = "lstAudioDevices";
+            this.lstAudioDevices.Size = new System.Drawing.Size(238, 43);
+            this.lstAudioDevices.TabIndex = 17;
+            this.lstAudioDevices.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(204, 269);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 18;
+            this.button4.Text = "Prikaz";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panelVideoPreview
+            // 
+            this.panelVideoPreview.Location = new System.Drawing.Point(285, 12);
+            this.panelVideoPreview.Name = "panelVideoPreview";
+            this.panelVideoPreview.Size = new System.Drawing.Size(327, 280);
+            this.panelVideoPreview.TabIndex = 19;
+            this.panelVideoPreview.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(126, 269);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Snimi Sliku";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // RegistracijaZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 177);
+            this.ClientSize = new System.Drawing.Size(622, 299);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.panelVideoPreview);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.lstAudioDevices);
+            this.Controls.Add(this.lstVideoDevices);
+            this.Controls.Add(this.Uslikaj);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -164,6 +234,7 @@
             this.Controls.Add(this.t_z_ime);
             this.Name = "RegistracijaZaposlenika";
             this.Text = "Registracija Zaposlenika";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegistracijaZaposlenika_FormClosing);
             this.Load += new System.EventHandler(this.RegistracijaZaposlenika_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,5 +255,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Uslikaj;
+        private System.Windows.Forms.ListBox lstVideoDevices;
+        private System.Windows.Forms.ListBox lstAudioDevices;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panelVideoPreview;
+        private System.Windows.Forms.Button button3;
     }
 }

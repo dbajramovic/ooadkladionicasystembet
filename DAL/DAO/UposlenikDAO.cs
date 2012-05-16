@@ -19,7 +19,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("INSERT INTO uposlenik (ImePrezime,JMBG,Password) VALUES ('" + entity.ImePrezime + "','"+entity.Jmbg+"','" + entity.Password + "')", con);
+                    c = new MySqlCommand("INSERT INTO uposlenik (ImePrezime,JMBG,Password,Picpath) VALUES ('" + entity.ImePrezime + "','"+entity.Jmbg+"','" + entity.Password + "','"+entity.Picpath+"')", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -38,7 +38,7 @@ namespace DAL
                     List<Uposlenik> uposlenici = new List<Uposlenik>();
                     while (r.Read())
                     {
-                        Uposlenik u = new Uposlenik(r.GetString("ImePrezime"),r.GetString("JMBG"),r.GetString("Password"));
+                        Uposlenik u = new Uposlenik(r.GetString("ImePrezime"),r.GetString("JMBG"),r.GetString("Password"),r.GetString("Picpath"));
                         u.IDUposlenika = r.GetInt32("IDUposlenik");
                         uposlenici.Add(u);
                     }
@@ -71,7 +71,7 @@ namespace DAL
                 c = new MySqlCommand("SELECT * from uposlenik WHERE IdUposlenik='" + id + "'", con);
                 MySqlDataReader r = c.ExecuteReader();
                 r.Read();
-                Uposlenik cla = new Uposlenik(r.GetString("ImePrezime"), r.GetString("JMBG"),r.GetString("Password"));
+                Uposlenik cla = new Uposlenik(r.GetString("ImePrezime"), r.GetString("JMBG"),r.GetString("Password"),r.GetString("Picpath"));
                 cla.IDUposlenika = r.GetInt32("IDUposlenik");
                 r.Close();
                 return cla;

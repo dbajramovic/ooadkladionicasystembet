@@ -8,13 +8,19 @@ namespace DAL.Entiteti
     public class Clan :  Osoba 
     {
         double IDClana;
-        public Clan(String i, String j)  : base(i,j)  { }
+        string picpath;
+        public Clan(string i, string j, string p) : base(i, j) { picpath = p; }
         ~Clan() { }
 
         public double DajIDClana
         {
             get { return IDClana; }
             set { IDClana = value; }
+        }
+        public string Picpath
+        {
+            get { return picpath; }
+            set { picpath = value; }
         }
     }
 

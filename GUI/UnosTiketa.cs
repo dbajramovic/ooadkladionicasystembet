@@ -87,23 +87,7 @@ namespace GUI
 
         private void b_pretraga_Click(object sender, EventArgs e)
         {
-            DAL.DAL d = DAL.DAL.Instanca;
-            try
-            {
-               
-                d.kreirajKonekciju("localhost", "kladionica", "root", "");
-                DAL.DAL.DogadjajDAO dd = d.getDAO.getDogadjajDAO();
-                ld2.Clear();
-                ld2.Add(dd.getById(Convert.ToInt32(t_pretraga.Text)));
-                d.terminirajKonekciju();
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = ld2;
-            }
-            catch (Exception g)
-            {
-                MessageBox.Show(g.Message);
-                d.terminirajKonekciju();
-            }
+           
         }
 
         private void c_clan_CheckedChanged(object sender, EventArgs e)

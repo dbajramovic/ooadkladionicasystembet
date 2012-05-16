@@ -80,7 +80,7 @@ namespace DAL
             public List<Ucesnik> getByExample(string name, string value)
             {
                 List<Ucesnik> lista_uc = new List<Ucesnik>();
-                c = new MySqlCommand("SELECT * from ucesnik WHERE ime like '" + name + "%'", con);
+                c = new MySqlCommand("SELECT * from ucesnik WHERE ime like '" + name + "%' a", con);
                 MySqlDataReader r = c.ExecuteReader();
                 while (r.Read()) { 
                  Ucesnik cla = new Ucesnik(r.GetString("ime"), r.GetString("picpath"));

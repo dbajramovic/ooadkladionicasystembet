@@ -12,10 +12,17 @@ namespace GUI
 {
     public partial class UnosDogadjaja : Form
     {
+        List<Takmicenje> lista_takmicenja=null;
         List<Ucesnik> lista_ucesnika2 = new List<Ucesnik>();
         List<Ucesnik> lista_ucesnika1 = new List<Ucesnik>();
+        List<Ucesnik> lu_temp = new List<Ucesnik>();
         public UnosDogadjaja()
         {
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju("localhost", "kladionica", "root", "");
+            DAL.DAL.TakmicenjeDAO dd = d.getDAO.getTakmicenjeDAO();
+            lista_takmicenja = dd.getAll();
+            d.terminirajKonekciju();
             InitializeComponent();
         }
 
@@ -166,7 +173,17 @@ namespace GUI
 
         private void UnosDogadjaja_Load(object sender, EventArgs e)
         {
-
+            dtp_do.Value = DateTime.Now;
+            comboBox1.DataSource = lista_takmicenja;
+            Takmicenje t = (Takmicenje)comboBox1.SelectedItem;
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju("localhost", "kladionica", "root", "");
+            DAL.DAL.TakmicenjeDAO dd = d.getDAO.getTakmicenjeDAO();
+            lista_ucesnika2 = dd.DajPovezaneUcesnike(t);
+            lista_ucesnika1 = dd.DajPovezaneUcesnike(t);
+            d.terminirajKonekciju();
+            c_imeprvogucenika.DataSource = lista_ucesnika1;
+            c_imedrugogucesnika.DataSource = lista_ucesnika2;
         }
 
         private void c_imeprvogucenika_SelectedIndexChanged(object sender, EventArgs e)
@@ -181,22 +198,18 @@ namespace GUI
 
         private void c_imeprvogucenika_TextUpdate(object sender, EventArgs e)
         {
-            c_imeprvogucenika.DataSource = null;
-            c_imeprvogucenika.Items.Clear();
-            List<string> lista_stringova=new List<string>();
-            lista_ucesnika1 = null;
-            DAL.DAL d = DAL.DAL.Instanca;
-            d.kreirajKonekciju("localhost", "kladionica", "root", "");
-
-            DAL.DAL.UcesnikDAO dd = d.getDAO.getUcesnikDAO();
-            lista_ucesnika1 = dd.getByExample(c_imeprvogucenika.Text, "");
-            d.terminirajKonekciju();
-            c_imeprvogucenika.DataSource = null;
+           
+            lu_temp.Clear();
             foreach (Ucesnik u in lista_ucesnika1)
             {
-                lista_stringova.Add(u.Ime);
+                if (u.Ime.Contains(c_imeprvogucenika.Text))
+                {
+                    lu_temp.Add(u);
+                    
+                }
             }
-            c_imeprvogucenika.DataSource = lista_ucesnika1;
+            c_imeprvogucenika.DataSource = null;
+            c_imeprvogucenika.DataSource = lu_temp;
         }
 
         private void c_imedrugogucesnika_SelectedIndexChanged(object sender, EventArgs e)
@@ -218,6 +231,17 @@ namespace GUI
             d.terminirajKonekciju();
             c_imedrugogucesnika.DataSource = null;
             c_imedrugogucesnika.DataSource = lista_ucesnika2;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Takmicenje t = (Takmicenje)comboBox1.SelectedItem;
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju("localhost", "kladionica", "root", "");
+            DAL.DAL.TakmicenjeDAO dd = d.getDAO.getTakmicenjeDAO();
+            lista_ucesnika2 = dd.DajPovezaneUcesnike(t);
+            lista_ucesnika1 = dd.DajPovezaneUcesnike(t);
+            d.terminirajKonekciju();
         }
     }
 }

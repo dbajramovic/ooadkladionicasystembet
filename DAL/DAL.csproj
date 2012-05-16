@@ -55,6 +55,7 @@
     <Compile Include="DAO\DogadjajDAO.cs" />
     <Compile Include="DAO\OsobaDAO.cs" />
     <Compile Include="DAO\PitanjeDAO.cs" />
+    <Compile Include="DAO\TakmicenjeDAO.cs" />
     <Compile Include="DAO\TiketDAO.cs" />
     <Compile Include="DAO\UcesnikDAO.cs" />
     <Compile Include="DAO\UposlenikDAO.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Entiteti\Dogadjaj.cs" />
     <Compile Include="Entiteti\Osoba.cs" />
     <Compile Include="Entiteti\Pitanje.cs" />
+    <Compile Include="Entiteti\Takmicenje.cs" />
     <Compile Include="Entiteti\Tiket.cs" />
     <Compile Include="Entiteti\Ucesnik.cs" />
     <Compile Include="Entiteti\Uposlenik.cs" />

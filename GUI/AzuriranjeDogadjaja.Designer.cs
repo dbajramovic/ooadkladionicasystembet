@@ -79,6 +79,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.n_kvota1_1 = new System.Windows.Forms.NumericUpDown();
             this.c_kvota1 = new System.Windows.Forms.CheckBox();
+            this.n_rezultat = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -108,6 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_rezultat)).BeginInit();
             this.SuspendLayout();
             // 
             // t_s_id_dogadjaja
@@ -148,7 +151,7 @@
             // c_imeprvogucenika
             // 
             this.c_imeprvogucenika.FormattingEnabled = true;
-            this.c_imeprvogucenika.Location = new System.Drawing.Point(177, 249);
+            this.c_imeprvogucenika.Location = new System.Drawing.Point(153, 249);
             this.c_imeprvogucenika.Name = "c_imeprvogucenika";
             this.c_imeprvogucenika.Size = new System.Drawing.Size(166, 21);
             this.c_imeprvogucenika.TabIndex = 38;
@@ -217,7 +220,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(179, 294);
+            this.label9.Location = new System.Drawing.Point(153, 294);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(101, 13);
             this.label9.TabIndex = 31;
@@ -225,7 +228,7 @@
             // 
             // dtp_do
             // 
-            this.dtp_do.Location = new System.Drawing.Point(286, 294);
+            this.dtp_do.Location = new System.Drawing.Point(260, 292);
             this.dtp_do.MinDate = new System.DateTime(2012, 4, 27, 0, 0, 0, 0);
             this.dtp_do.Name = "dtp_do";
             this.dtp_do.Size = new System.Drawing.Size(113, 20);
@@ -234,12 +237,13 @@
             // 
             // b_odustani
             // 
-            this.b_odustani.Location = new System.Drawing.Point(526, 472);
+            this.b_odustani.Location = new System.Drawing.Point(531, 468);
             this.b_odustani.Name = "b_odustani";
-            this.b_odustani.Size = new System.Drawing.Size(94, 27);
+            this.b_odustani.Size = new System.Drawing.Size(94, 31);
             this.b_odustani.TabIndex = 29;
             this.b_odustani.Text = "Odustani";
             this.b_odustani.UseVisualStyleBackColor = true;
+            this.b_odustani.Click += new System.EventHandler(this.b_odustani_Click_1);
             // 
             // b_dodaj
             // 
@@ -706,11 +710,45 @@
             this.c_kvota1.Text = "Postoji";
             this.c_kvota1.UseVisualStyleBackColor = true;
             // 
+            // n_rezultat
+            // 
+            this.n_rezultat.Location = new System.Drawing.Point(284, 475);
+            this.n_rezultat.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.n_rezultat.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.n_rezultat.Name = "n_rezultat";
+            this.n_rezultat.Size = new System.Drawing.Size(120, 20);
+            this.n_rezultat.TabIndex = 40;
+            this.n_rezultat.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(202, 471);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 24);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Rezultat";
+            // 
             // AzuriranjeDogadjaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 509);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.n_rezultat);
             this.Controls.Add(this.c_imedrugogucesnika);
             this.Controls.Add(this.c_imeprvogucenika);
             this.Controls.Add(this.pictureBox2);
@@ -769,6 +807,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_kvota1_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n_rezultat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -827,5 +866,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown n_kvota1_1;
         private System.Windows.Forms.CheckBox c_kvota1;
+        private System.Windows.Forms.NumericUpDown n_rezultat;
+        private System.Windows.Forms.Label label2;
     }
 }
