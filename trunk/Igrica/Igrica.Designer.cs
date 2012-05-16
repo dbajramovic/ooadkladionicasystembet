@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnSelectLevels = new System.Windows.Forms.Button();
-            this.btnNewGame = new System.Windows.Forms.Button();
+            this.b_izaberi_nivo = new System.Windows.Forms.Button();
+            this.b_nova_igra = new System.Windows.Forms.Button();
             this.tmr1 = new System.Windows.Forms.Timer(this.components);
             this.tmr2 = new System.Windows.Forms.Timer(this.components);
             this.tmrLBLRefresher = new System.Windows.Forms.Timer(this.components);
@@ -59,37 +59,39 @@
             this.btnLvl15 = new System.Windows.Forms.Button();
             this.btnLvl14 = new System.Windows.Forms.Button();
             this.btnLvl13 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.b_sljedeci_nivo = new System.Windows.Forms.Button();
+            this.timerObrni = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBall)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSelectLevels
+            // b_izaberi_nivo
             // 
-            this.btnSelectLevels.BackColor = System.Drawing.SystemColors.WindowText;
-            this.btnSelectLevels.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSelectLevels.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectLevels.Location = new System.Drawing.Point(330, 467);
-            this.btnSelectLevels.Name = "btnSelectLevels";
-            this.btnSelectLevels.Size = new System.Drawing.Size(300, 92);
-            this.btnSelectLevels.TabIndex = 3;
-            this.btnSelectLevels.TabStop = false;
-            this.btnSelectLevels.Text = "Select Levels";
-            this.btnSelectLevels.UseVisualStyleBackColor = false;
-            this.btnSelectLevels.Click += new System.EventHandler(this.btnSelectLevels_Click);
+            this.b_izaberi_nivo.BackColor = System.Drawing.SystemColors.WindowText;
+            this.b_izaberi_nivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b_izaberi_nivo.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_izaberi_nivo.Location = new System.Drawing.Point(330, 467);
+            this.b_izaberi_nivo.Name = "b_izaberi_nivo";
+            this.b_izaberi_nivo.Size = new System.Drawing.Size(300, 92);
+            this.b_izaberi_nivo.TabIndex = 3;
+            this.b_izaberi_nivo.TabStop = false;
+            this.b_izaberi_nivo.Text = "Izaberi Nivo";
+            this.b_izaberi_nivo.UseVisualStyleBackColor = false;
+            this.b_izaberi_nivo.Click += new System.EventHandler(this.btnSelectLevels_Click);
             // 
-            // btnNewGame
+            // b_nova_igra
             // 
-            this.btnNewGame.BackColor = System.Drawing.SystemColors.WindowText;
-            this.btnNewGame.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNewGame.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewGame.Location = new System.Drawing.Point(330, 169);
-            this.btnNewGame.Name = "btnNewGame";
-            this.btnNewGame.Size = new System.Drawing.Size(300, 92);
-            this.btnNewGame.TabIndex = 2;
-            this.btnNewGame.TabStop = false;
-            this.btnNewGame.Text = "New Game";
-            this.btnNewGame.UseVisualStyleBackColor = false;
-            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
+            this.b_nova_igra.BackColor = System.Drawing.SystemColors.WindowText;
+            this.b_nova_igra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b_nova_igra.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_nova_igra.Location = new System.Drawing.Point(330, 169);
+            this.b_nova_igra.Name = "b_nova_igra";
+            this.b_nova_igra.Size = new System.Drawing.Size(300, 92);
+            this.b_nova_igra.TabIndex = 2;
+            this.b_nova_igra.TabStop = false;
+            this.b_nova_igra.Text = "Nova Igra";
+            this.b_nova_igra.UseVisualStyleBackColor = false;
+            this.b_nova_igra.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // tmr1
             // 
@@ -124,24 +126,25 @@
             // 
             this.lblClear.AutoSize = true;
             this.lblClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClear.Location = new System.Drawing.Point(269, 105);
+            this.lblClear.Location = new System.Drawing.Point(269, 90);
             this.lblClear.Name = "lblClear";
-            this.lblClear.Size = new System.Drawing.Size(423, 76);
+            this.lblClear.Size = new System.Drawing.Size(437, 76);
             this.lblClear.TabIndex = 6;
-            this.lblClear.Text = "Level 1 Clear";
+            this.lblClear.Text = "Nivo 1 Gotov!";
             this.lblClear.Visible = false;
+            this.lblClear.Click += new System.EventHandler(this.lblClear_Click);
             // 
             // btnNext
             // 
             this.btnNext.BackColor = System.Drawing.SystemColors.WindowText;
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNext.Font = new System.Drawing.Font("Harlow Solid Italic", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Font = new System.Drawing.Font("Harlow Solid Italic", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.Location = new System.Drawing.Point(330, 300);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(300, 92);
             this.btnNext.TabIndex = 7;
             this.btnNext.TabStop = false;
-            this.btnNext.Text = "Next Level";
+            this.btnNext.Text = "Sljedeci Nivo";
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Visible = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
@@ -152,9 +155,9 @@
             this.lblComplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplete.Location = new System.Drawing.Point(269, 181);
             this.lblComplete.Name = "lblComplete";
-            this.lblComplete.Size = new System.Drawing.Size(423, 76);
+            this.lblComplete.Size = new System.Drawing.Size(437, 76);
             this.lblComplete.TabIndex = 8;
-            this.lblComplete.Text = "Level 1 Clear";
+            this.lblComplete.Text = "Nivo 1 Gotov!";
             this.lblComplete.Visible = false;
             // 
             // timer1
@@ -442,27 +445,44 @@
             this.btnLvl13.Visible = false;
             this.btnLvl13.Click += new System.EventHandler(this.btnLvl13_Click);
             // 
-            // button1
+            // b_sljedeci_nivo
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.WindowText;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(330, 300);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 92);
-            this.button1.TabIndex = 27;
-            this.button1.TabStop = false;
-            this.button1.Text = "Next Level";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
+            this.b_sljedeci_nivo.BackColor = System.Drawing.SystemColors.WindowText;
+            this.b_sljedeci_nivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b_sljedeci_nivo.Font = new System.Drawing.Font("Harlow Solid Italic", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_sljedeci_nivo.Location = new System.Drawing.Point(330, 300);
+            this.b_sljedeci_nivo.Name = "b_sljedeci_nivo";
+            this.b_sljedeci_nivo.Size = new System.Drawing.Size(300, 92);
+            this.b_sljedeci_nivo.TabIndex = 27;
+            this.b_sljedeci_nivo.TabStop = false;
+            this.b_sljedeci_nivo.Text = "Sljedeci Nivo";
+            this.b_sljedeci_nivo.UseVisualStyleBackColor = false;
+            this.b_sljedeci_nivo.Visible = false;
             // 
-            // Form1
+            // timerObrni
+            // 
+            this.timerObrni.Interval = 500;
+            this.timerObrni.Tick += new System.EventHandler(this.timerObrni_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mistral", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 44);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "FLIPED!";
+            this.label1.Visible = false;
+            // 
+            // Igrica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(960, 640);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.b_sljedeci_nivo);
             this.Controls.Add(this.btnLvl18);
             this.Controls.Add(this.btnLvl17);
             this.Controls.Add(this.btnLvl16);
@@ -486,11 +506,11 @@
             this.Controls.Add(this.lblClear);
             this.Controls.Add(this.pbBall);
             this.Controls.Add(this.lblBTNDgnstcs);
-            this.Controls.Add(this.btnSelectLevels);
-            this.Controls.Add(this.btnNewGame);
+            this.Controls.Add(this.b_izaberi_nivo);
+            this.Controls.Add(this.b_nova_igra);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Igrica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -505,10 +525,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.Button b_nova_igra;
         private System.Windows.Forms.Timer tmr1;
         private System.Windows.Forms.Timer tmr2;
-        private System.Windows.Forms.Button btnSelectLevels;
+        private System.Windows.Forms.Button b_izaberi_nivo;
         private System.Windows.Forms.Timer tmrLBLRefresher;
         private System.Windows.Forms.Label lblBTNDgnstcs;
         private System.Windows.Forms.PictureBox pbBall;
@@ -535,7 +555,9 @@
         private System.Windows.Forms.Button btnLvl15;
         private System.Windows.Forms.Button btnLvl14;
         private System.Windows.Forms.Button btnLvl13;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button b_sljedeci_nivo;
+        private System.Windows.Forms.Timer timerObrni;
+        private System.Windows.Forms.Label label1;
     }
 }
 

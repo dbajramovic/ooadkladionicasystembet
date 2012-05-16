@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDI", "GDI\GDI.csproj", "{D6264175-2DB7-4CA8-B7DC-CA21FC624878}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igrica", "..\Ball Escape\Igrica.csproj", "{F0219369-56B1-4DA0-A4C8-18047027764E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igrica", "Igrica\Igrica.csproj", "{F0219369-56B1-4DA0-A4C8-18047027764E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
