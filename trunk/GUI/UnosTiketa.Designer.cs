@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.b_dodaj = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,16 +55,6 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
-            // 
-            // b_dodaj
-            // 
-            this.b_dodaj.Location = new System.Drawing.Point(704, 2);
-            this.b_dodaj.Name = "b_dodaj";
-            this.b_dodaj.Size = new System.Drawing.Size(156, 23);
-            this.b_dodaj.TabIndex = 6;
-            this.b_dodaj.Text = "Dodaj";
-            this.b_dodaj.UseVisualStyleBackColor = true;
-            this.b_dodaj.Click += new System.EventHandler(this.b_dodaj_Click);
             // 
             // dataGridView2
             // 
@@ -191,7 +180,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.b_dodaj);
             this.Controls.Add(this.dataGridView1);
             this.Name = "UnosTiketa";
             this.Text = "Unos Tiketa";
@@ -209,7 +197,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button b_dodaj;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

@@ -52,6 +52,10 @@ namespace DAL
             {
                 return new UcesnikDAO();
             }
+            public TakmicenjeDAO getTakmicenjeDAO()
+            {
+                return new TakmicenjeDAO();
+            }
         }
     }
 }

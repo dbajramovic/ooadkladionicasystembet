@@ -11,6 +11,7 @@ using System.Diagnostics;
 using Microsoft.Expression.Encoder.Devices;
 using Microsoft.Expression.Encoder.Live;
 using Microsoft.Expression.Encoder;
+using DAL.Entiteti;
 
 namespace GUI
 {
@@ -20,7 +21,8 @@ namespace GUI
         /// Creates job for capture of live source
         /// </summary>
         private LiveJob _job;
-
+        Clan c;
+        Uposlenik o;
         /// <summary>
         /// Device for live source
         /// </summary>
@@ -28,15 +30,15 @@ namespace GUI
 
         private bool _bStartedRecording = false;
 
-        public Kamera()
+        public Kamera(Clan dc,Uposlenik up)
         {
+            c = dc;
+            o = up;
             InitializeComponent();
         }
 
         private void Kamera_Load(object sender, EventArgs e)
         {
-            this.Text += " - ver. " + Application.ProductVersion;
-
             lstVideoDevices.ClearSelected();
             foreach (EncoderDevice edv in EncoderDevices.FindDevices(EncoderDeviceType.Video))
             {
@@ -75,7 +77,7 @@ namespace GUI
                 _deviceSource = _job.AddDeviceSource(video, audio);
 
                 // Is it required to show the configuration dialogs ?
-                if (checkBoxShowConfigDialog.Checked)
+                if(1==2)
                 {
                     // Yes
                     // VFW video device ?
@@ -157,7 +159,7 @@ namespace GUI
                 // Make this source the active one
                 _job.ActivateSource(_deviceSource);
 
-                btnStartStopRecording.Enabled = true;
+              
                 btnGrabImage.Enabled = true;
 
                 toolStripStatusLabel1.Text = "Preview activated";
@@ -167,39 +169,6 @@ namespace GUI
                 // Gives error message as no audio and/or video devices found
                 MessageBox.Show("No Video/Audio capture devices have been found.", "Warning");
                 toolStripStatusLabel1.Text = "No Video/Audio capture devices have been found.";
-            }
-        }
-
-        private void btnStartStopRecording_Click(object sender, EventArgs e)
-        {
-            // Is it Recoring ?
-            if (_bStartedRecording)
-            {
-                // Yes
-                // Stops encoding
-                _job.StopEncoding();
-                btnStartStopRecording.Text = "Start Recording";
-                toolStripStatusLabel1.Text = "";
-                _bStartedRecording = false;
-            }
-            else
-            {
-                // Sets up publishing format for file archival type
-                FileArchivePublishFormat fileOut = new FileArchivePublishFormat();
-
-                // Sets file path and name
-                fileOut.OutputFileName = String.Format("C:\\WebCam{0:yyyyMMdd_hhmmss}.wmv", DateTime.Now);
-
-                // Adds the format to the job. You can add additional formats as well such as
-                // Publishing streams or broadcasting from a port
-                _job.PublishFormats.Add(fileOut);
-
-                // Start encoding
-                _job.StartEncoding();
-
-                btnStartStopRecording.Text = "Stop Recording";
-                toolStripStatusLabel1.Text = fileOut.OutputFileName;
-                _bStartedRecording = true;
             }
         }
 
@@ -218,9 +187,14 @@ namespace GUI
                         g.CopyFromScreen(sourcePoints, Point.Empty, rectanglePanelVideoPreview.Size);
                     }
 
-                    string strGrabFileName = String.Format("C:\\Snapshot_{0:yyyyMMdd_hhmmss}.jpg", DateTime.Now);
+                    string strGrabFileName = String.Format("C:\\Users\\DebilMC\\Desktop\\SystemBetSlike\\Snapshot_{0:yyyyMMdd_hhmmss}.jpg", DateTime.Now);
                     toolStripStatusLabel1.Text = strGrabFileName;
                     bitmap.Save(strGrabFileName, System.Drawing.Imaging.ImageFormat.Bmp);
+                    if (c.ImePrezime!="NijeClan")
+                    c.Picpath = strGrabFileName;
+                    if (o.ImePrezime != "NijeUposlenik")
+                    o.Picpath = strGrabFileName;
+                    this.Close();
                 }
             }
             catch (Exception exp)
@@ -313,7 +287,7 @@ namespace GUI
                 {
                     // Yes
                     // Stop Capturing
-                    btnStartStopRecording.PerformClick();
+                    
                 }
 
                 _job.StopEncoding();
@@ -331,5 +305,9 @@ namespace GUI
         {
             StopJob();
         }
+
+        private void checkBoxShowConfigDialog_CheckedChanged(object sender, EventArgs e)
+        {
+                    }
     }
 }

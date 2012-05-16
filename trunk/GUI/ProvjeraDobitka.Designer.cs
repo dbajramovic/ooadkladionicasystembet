@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.b_trazi = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.g_izvjestaj = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -55,16 +54,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
-            // 
-            // b_trazi
-            // 
-            this.b_trazi.Location = new System.Drawing.Point(182, 7);
-            this.b_trazi.Name = "b_trazi";
-            this.b_trazi.Size = new System.Drawing.Size(75, 23);
-            this.b_trazi.TabIndex = 2;
-            this.b_trazi.Text = "Traži";
-            this.b_trazi.UseVisualStyleBackColor = true;
-            this.b_trazi.Click += new System.EventHandler(this.b_trazi_Click);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
@@ -125,7 +115,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.g_izvjestaj);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.b_trazi);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -144,7 +133,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button b_trazi;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox g_izvjestaj;
         private System.Windows.Forms.Button button1;

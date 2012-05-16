@@ -49,7 +49,7 @@ namespace GUI
 
         private void b_dodaj_Click(object sender, EventArgs e)
         {
-           /* double kvota1, kvotax, kvota2, kvota1x, kvotax2, kvota12;
+            double kvota1, kvotax, kvota2, kvota1x, kvotax2, kvota12;
             kvota1 = Convert.ToInt32(n_kvota1_1.Value) + (Convert.ToInt32(n_kvota1_2.Value) * 0.1) + (Convert.ToInt32(n_kvota1_3.Value) * 0.01);
             kvotax = Convert.ToInt32(n_kvotax_1.Value) + (Convert.ToInt32(n_kvotax_2.Value) * 0.1) + (Convert.ToInt32(n_kvotax_3.Value) * 0.01);
             kvota2 = Convert.ToInt32(n_kvota2_1.Value) + (Convert.ToInt32(n_kvota2_2.Value) * 0.1) + (Convert.ToInt32(n_kvota2_3.Value) * 0.01);
@@ -62,8 +62,8 @@ namespace GUI
             if (!c_kvota1x.Checked) kvota1x = 1.00;
             if (!c_kvotax2.Checked) kvotax2 = 1.00;
             if (!c_kvota12.Checked) kvota12 = 1.00;
-            rezultat.ImePrvogUcesnika = t_ime_prvog_ucesnika.Text;
-            rezultat.ImeDrugogUcesnika = t_imedrugogucesnika.Text;
+            rezultat.ImePrvogUcesnika = c_imeprvogucenika.Text;
+            rezultat.ImeDrugogUcesnika = c_imedrugogucesnika.Text;
             rezultat.Kvota_1 = kvota1;
             rezultat.Kvota_X = kvotax;
             rezultat.Kvota_2 = kvota2;
@@ -78,7 +78,7 @@ namespace GUI
             Dogadjaj temp = dd.update(rezultat);
             MessageBox.Show("Događaj promijenjen!");
             d.terminirajKonekciju();
-            this.Close();*/
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace GUI
                 n_satnica_h.Value = rezultat.SatnicaOdrzavanja / 100;
                 c_imedrugogucesnika.Text = rezultat.ImeDrugogUcesnika;
                 c_imeprvogucenika.Text = rezultat.ImePrvogUcesnika;
-                //n_rezultat.Value = rezultat.Rezultat;
+                n_rezultat.Value = rezultat.Rezultat;
                 kvota1 = rezultat.Kvota_1;
                 kvotax = rezultat.Kvota_X;
                 kvota2 = rezultat.Kvota_2;
@@ -207,6 +207,11 @@ namespace GUI
                 while (temp >= 10)
                     temp -= 10;
                 n_kvota12_3.Value = temp;
+        }
+
+        private void b_odustani_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

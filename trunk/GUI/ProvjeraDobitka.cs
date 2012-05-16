@@ -20,15 +20,7 @@ namespace GUI
 
         private void b_trazi_Click(object sender, EventArgs e)
         {
-            lista_tiketa.Clear();
-            string id = textBox1.Text;
-            DAL.DAL d = DAL.DAL.Instanca;
-            d.kreirajKonekciju("localhost", "kladionica", "root", "");
-            DAL.DAL.TiketDAO tt = d.getDAO.getTiketDAO();
-            lista_tiketa.Add(tt.getById(Convert.ToInt32(id)));
-            d.terminirajKonekciju();
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = lista_tiketa;
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -74,6 +66,19 @@ namespace GUI
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            lista_tiketa.Clear();
+            string id = textBox1.Text;
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju("localhost", "kladionica", "root", "");
+            DAL.DAL.TiketDAO tt = d.getDAO.getTiketDAO();
+            lista_tiketa = tt.getByExample(textBox1.Text,"");
+            d.terminirajKonekciju();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = lista_tiketa;
         }
     }
 }

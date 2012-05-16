@@ -14,7 +14,7 @@ namespace DAL
         public class TiketDAO : IDaoCrud<Tiket>
         {
             #region IDaoCrud<Tiket> Members
-            protected MySqlCommand c1,c2,g,d,p,k;
+            protected MySqlCommand c1,c2,g,d,p,k,g1;
 
             public long create(Tiket entity)
             {
@@ -93,7 +93,21 @@ namespace DAL
 
             public List<Tiket> getByExample(string name, string value)
             {
-                throw new NotImplementedException();
+                List<Tiket> lista_tiketa = new List<Tiket>();
+                g1 = new MySqlCommand("SELECT * from tiketi WHERE idtiketi LIKE'" + name + "%'", con);
+                MySqlDataReader r = g1.ExecuteReader();
+                while (r.Read())
+                {
+                    Tiket tik = new Tiket(Convert.ToDateTime(r.GetString("Datum")));
+                    tik.Da_Li_Je_Clan_Uplatio = r.GetBoolean("Clan");
+                    tik.Uplata = r.GetDouble("Uplata");
+                    tik.Dobitak = r.GetDouble("Dobitak");
+                    tik.ID_Tiketa = r.GetInt32("idtiketi");
+                    lista_tiketa.Add(tik);
+
+                }
+                r.Close();
+                return lista_tiketa;
             }
             public List<Dogadjaj> DajPovezaneDogadjaje(Tiket entity)
             {

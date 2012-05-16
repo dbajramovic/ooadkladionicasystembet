@@ -180,11 +180,6 @@ namespace GUI
             xt.Close();
         }
 
-        private void testToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Kamera k = new Kamera();
-            k.Show();
-        }
 
         private void oProgramuToolStripMenuItem_Click(object sender, EventArgs e)
         {
