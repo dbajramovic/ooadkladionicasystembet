@@ -219,20 +219,10 @@ namespace Ball_Escape
             if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A && LoptaSeMozeKretati)
             {
                 //LoptaSeMozeKretati = false;
-                bool bCan = false;
-                 if (!Obrnuto){
-                     bCan = PomjeriLoptu(2);
-                 }
-                 if (Obrnuto)
-                 {
-                     bCan = PomjeriLoptu(4);
-                 }
+                bool bCan = PomjeriLoptu(2);
                 if (bCan)
                 {
-                    if(!Obrnuto)
-                        PomjeriLoptuLijevo = true;
-                    if (Obrnuto)
-                        PomjeriLoptuDesno = true;
+                        PomjeriLoptuLijevo = true;   
                     //pbBall.Left -= iSpeed;
                     /*for (int i = 1; i <= iSpeed; i++)
                     {
@@ -243,17 +233,10 @@ namespace Ball_Escape
             if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D && LoptaSeMozeKretati)
             {
                 //LoptaSeMozeKretati = false;
-                bool bCan = false;
-                if (!Obrnuto)
-                    bCan = PomjeriLoptu(4);
-                if (Obrnuto)
-                    bCan = PomjeriLoptu(2);
+                bool bCan = PomjeriLoptu(2);
                 if (bCan)
                 {
-                    if(!Obrnuto)
                     PomjeriLoptuDesno = true;
-                    if (Obrnuto)
-                    PomjeriLoptuLijevo = true;
                     //pbBall.Left += iSpeed;
                     /*for (int i = 1; i <= iSpeed; i++)
                     {

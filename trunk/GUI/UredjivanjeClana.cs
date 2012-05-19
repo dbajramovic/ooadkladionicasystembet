@@ -26,6 +26,7 @@ namespace GUI
             d.terminirajKonekciju();
             t_ime.Text = c.ImePrezime;
             t_jmbg.Text = c.Jmbg;
+            pictureBox1.ImageLocation = c.Picpath;
             groupBox1.Visible = true;
         }
     }
