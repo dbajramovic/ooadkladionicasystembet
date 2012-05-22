@@ -28,6 +28,7 @@ namespace GUI
             d.terminirajKonekciju();
             l_ime.Text = trazeni_clan.ImePrezime;
             l_jmbg.Text = trazeni_clan.Jmbg;
+            pictureBox1.ImageLocation = trazeni_clan.Picpath;
             groupBox1.Visible = true;
         }
 

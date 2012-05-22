@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistracijaZaposlenika));
             this.t_z_ime = new System.Windows.Forms.TextBox();
             this.t_z_prezime = new System.Windows.Forms.TextBox();
             this.t_z_jmbg = new System.Windows.Forms.TextBox();
@@ -213,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 299);
+            this.ClientSize = new System.Drawing.Size(759, 354);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panelVideoPreview);
             this.Controls.Add(this.button4);
@@ -232,6 +233,7 @@
             this.Controls.Add(this.t_z_jmbg);
             this.Controls.Add(this.t_z_prezime);
             this.Controls.Add(this.t_z_ime);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistracijaZaposlenika";
             this.Text = "Registracija Zaposlenika";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegistracijaZaposlenika_FormClosing);

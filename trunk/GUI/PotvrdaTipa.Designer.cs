@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PotvrdaTipa));
             this.g_izvjestaj = new System.Windows.Forms.GroupBox();
             this.r_tip_12 = new System.Windows.Forms.RadioButton();
             this.r_tip_x2 = new System.Windows.Forms.RadioButton();
@@ -144,6 +145,7 @@
             this.ClientSize = new System.Drawing.Size(362, 131);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.g_izvjestaj);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PotvrdaTipa";
             this.Text = "PotvrdaTipa";
             this.g_izvjestaj.ResumeLayout(false);

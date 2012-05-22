@@ -67,6 +67,21 @@ namespace DAL.Entiteti
             get { return lista_tipova; }
             set { lista_tipova = value; }
         }
+        public Boolean JeliKasno(DateTime sad)
+        {
+            if (sad.Hour == datum.Hour)
+            {
+                if (sad.Minute - datum.Minute < 15)
+                    return false;
+            }
+            else if ((sad.Hour - 1) == datum.Hour)
+            {
+                if ((sad.Minute + 60) - datum.Minute < 15)
+                    return false;
+            }
+                return true;
+        }
+
     }
 }
 

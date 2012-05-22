@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrintanjePonude));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.printajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
@@ -65,6 +66,7 @@
             this.ClientSize = new System.Drawing.Size(384, 383);
             this.Controls.Add(this.printPreviewControl1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PrintanjePonude";
             this.Text = "PrintanjePonude";

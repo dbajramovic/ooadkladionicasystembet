@@ -5,6 +5,7 @@ using System.Text;
 
 namespace DAL.Entiteti
 {
+    [Serializable]
     public class Dogadjaj
     {
         long id;

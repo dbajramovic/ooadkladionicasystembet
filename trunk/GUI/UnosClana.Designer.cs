@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UnosClana));
             this.t_ime = new System.Windows.Forms.TextBox();
             this.t_prezime = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -174,7 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 280);
+            this.ClientSize = new System.Drawing.Size(778, 331);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panelVideoPreview);
             this.Controls.Add(this.button4);
@@ -189,8 +190,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.t_prezime);
             this.Controls.Add(this.t_ime);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UnosClana";
             this.Text = "Unos Člana";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UnosClana_FormClosing);
             this.Load += new System.EventHandler(this.UnosClana_Load);
             this.Enter += new System.EventHandler(this.UnosClana_Enter);
             this.ResumeLayout(false);
