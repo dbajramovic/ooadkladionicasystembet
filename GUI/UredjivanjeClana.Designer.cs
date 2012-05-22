@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UredjivanjeClana));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lstAudioDevices = new System.Windows.Forms.ListBox();
+            this.lstVideoDevices = new System.Windows.Forms.ListBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panelVideoPreview = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.Uslikaj = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.t_jmbg = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,13 +46,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panelVideoPreview = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.lstAudioDevices = new System.Windows.Forms.ListBox();
-            this.lstVideoDevices = new System.Windows.Forms.ListBox();
-            this.Uslikaj = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,10 +67,76 @@
             this.groupBox1.Controls.Add(this.t_ime);
             this.groupBox1.Location = new System.Drawing.Point(8, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(635, 366);
+            this.groupBox1.Size = new System.Drawing.Size(885, 406);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Visible = false;
+            // 
+            // lstAudioDevices
+            // 
+            this.lstAudioDevices.FormattingEnabled = true;
+            this.lstAudioDevices.Location = new System.Drawing.Point(59, 351);
+            this.lstAudioDevices.Name = "lstAudioDevices";
+            this.lstAudioDevices.Size = new System.Drawing.Size(238, 43);
+            this.lstAudioDevices.TabIndex = 23;
+            this.lstAudioDevices.Visible = false;
+            // 
+            // lstVideoDevices
+            // 
+            this.lstVideoDevices.FormattingEnabled = true;
+            this.lstVideoDevices.Location = new System.Drawing.Point(59, 302);
+            this.lstVideoDevices.Name = "lstVideoDevices";
+            this.lstVideoDevices.Size = new System.Drawing.Size(239, 43);
+            this.lstVideoDevices.TabIndex = 22;
+            this.lstVideoDevices.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(140, 273);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 26;
+            this.button4.Text = "Snimi Sliku";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            // 
+            // panelVideoPreview
+            // 
+            this.panelVideoPreview.Location = new System.Drawing.Point(302, 16);
+            this.panelVideoPreview.Name = "panelVideoPreview";
+            this.panelVideoPreview.Size = new System.Drawing.Size(327, 280);
+            this.panelVideoPreview.TabIndex = 25;
+            this.panelVideoPreview.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(221, 273);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 24;
+            this.button5.Text = "Prikaz";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // Uslikaj
+            // 
+            this.Uslikaj.Location = new System.Drawing.Point(221, 244);
+            this.Uslikaj.Name = "Uslikaj";
+            this.Uslikaj.Size = new System.Drawing.Size(75, 23);
+            this.Uslikaj.TabIndex = 21;
+            this.Uslikaj.Text = "Uslikaj";
+            this.Uslikaj.UseVisualStyleBackColor = true;
+            this.Uslikaj.Click += new System.EventHandler(this.Uslikaj_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(59, 74);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 164);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -123,7 +190,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(461, 12);
+            this.button1.Location = new System.Drawing.Point(260, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -147,81 +214,20 @@
             this.textBox1.Size = new System.Drawing.Size(219, 20);
             this.textBox1.TabIndex = 3;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(59, 74);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 164);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(140, 273);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Snimi Sliku";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Visible = false;
-            // 
-            // panelVideoPreview
-            // 
-            this.panelVideoPreview.Location = new System.Drawing.Point(302, 16);
-            this.panelVideoPreview.Name = "panelVideoPreview";
-            this.panelVideoPreview.Size = new System.Drawing.Size(327, 280);
-            this.panelVideoPreview.TabIndex = 25;
-            this.panelVideoPreview.Visible = false;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(221, 273);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 24;
-            this.button5.Text = "Prikaz";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Visible = false;
-            // 
-            // lstAudioDevices
-            // 
-            this.lstAudioDevices.FormattingEnabled = true;
-            this.lstAudioDevices.Location = new System.Drawing.Point(391, 302);
-            this.lstAudioDevices.Name = "lstAudioDevices";
-            this.lstAudioDevices.Size = new System.Drawing.Size(238, 43);
-            this.lstAudioDevices.TabIndex = 23;
-            this.lstAudioDevices.Visible = false;
-            // 
-            // lstVideoDevices
-            // 
-            this.lstVideoDevices.FormattingEnabled = true;
-            this.lstVideoDevices.Location = new System.Drawing.Point(140, 302);
-            this.lstVideoDevices.Name = "lstVideoDevices";
-            this.lstVideoDevices.Size = new System.Drawing.Size(239, 43);
-            this.lstVideoDevices.TabIndex = 22;
-            this.lstVideoDevices.Visible = false;
-            // 
-            // Uslikaj
-            // 
-            this.Uslikaj.Location = new System.Drawing.Point(221, 244);
-            this.Uslikaj.Name = "Uslikaj";
-            this.Uslikaj.Size = new System.Drawing.Size(75, 23);
-            this.Uslikaj.TabIndex = 21;
-            this.Uslikaj.Text = "Uslikaj";
-            this.Uslikaj.UseVisualStyleBackColor = true;
-            // 
             // UredjivanjeClana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 407);
+            this.ClientSize = new System.Drawing.Size(905, 456);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UredjivanjeClana";
             this.Text = "Uređivanje Člana";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UredjivanjeClana_FormClosing);
+            this.Load += new System.EventHandler(this.UredjivanjeClana_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

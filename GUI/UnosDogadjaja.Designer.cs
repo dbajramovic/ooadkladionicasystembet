@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UnosDogadjaja));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.n_kvota1_3 = new System.Windows.Forms.NumericUpDown();
             this.n_kvota1_2 = new System.Windows.Forms.NumericUpDown();
@@ -724,6 +725,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UnosDogadjaja";
             this.Text = "Unos Događaja";
             this.Load += new System.EventHandler(this.UnosDogadjaja_Load);

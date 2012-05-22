@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OdabirClana));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.l_jmbg = new System.Windows.Forms.Label();
             this.l_ime = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -68,6 +71,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.l_jmbg);
             this.groupBox1.Controls.Add(this.l_ime);
             this.groupBox1.Controls.Add(this.button2);
@@ -75,37 +79,46 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(14, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(257, 167);
+            this.groupBox1.Size = new System.Drawing.Size(288, 144);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Podaci Člana";
             this.groupBox1.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(164, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 108);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // l_jmbg
             // 
             this.l_jmbg.AutoSize = true;
-            this.l_jmbg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_jmbg.Location = new System.Drawing.Point(93, 67);
+            this.l_jmbg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_jmbg.Location = new System.Drawing.Point(54, 71);
             this.l_jmbg.Name = "l_jmbg";
-            this.l_jmbg.Size = new System.Drawing.Size(60, 24);
+            this.l_jmbg.Size = new System.Drawing.Size(46, 18);
             this.l_jmbg.TabIndex = 6;
             this.l_jmbg.Text = "label5";
             // 
             // l_ime
             // 
             this.l_ime.AutoSize = true;
-            this.l_ime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_ime.Location = new System.Drawing.Point(93, 35);
+            this.l_ime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_ime.Location = new System.Drawing.Point(83, 39);
             this.l_ime.Name = "l_ime";
-            this.l_ime.Size = new System.Drawing.Size(60, 24);
+            this.l_ime.Size = new System.Drawing.Size(46, 18);
             this.l_ime.TabIndex = 4;
             this.l_ime.Text = "label5";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(9, 111);
+            this.button2.Location = new System.Drawing.Point(6, 101);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(242, 42);
+            this.button2.Size = new System.Drawing.Size(101, 30);
             this.button2.TabIndex = 3;
             this.button2.Text = "OK";
             this.button2.UseVisualStyleBackColor = true;
@@ -133,17 +146,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 218);
+            this.ClientSize = new System.Drawing.Size(314, 194);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "OdabirClana";
             this.Text = "Odabir Člana";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +175,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

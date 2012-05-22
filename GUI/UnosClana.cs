@@ -293,5 +293,10 @@ namespace GUI
                 MessageBox.Show(exp.Message);
             }
         }
+
+        private void UnosClana_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            StopJob();
+        }
     }
 }

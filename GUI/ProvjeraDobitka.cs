@@ -46,15 +46,17 @@ namespace GUI
                     if (drogba.Rezultat == -1) throw new Exception("Događaj nije još završen!");
                     if (drogba.Rezultat != tiket_za_preradu.ListaTipova[brojac])
                     {
-                        l_je_li_dobitni.Text = "Tiket nije dobitni, jer rezultat" + brojac + ". događaja nije isti kao i tip!";
+                        l_je_li_dobitni.Text = "Tiket nije dobitni, jer rezultat" + brojac + ". događaja nije isti kao i tip";
                         valja = false;
                         break;
                     }
                 }
                 if (valja)
                 {
-                    l_je_li_dobitni.Text = "Tiket je dobitni i dobitak iznosi :" + tiket_za_preradu.Dobitak + " KM!";
+                    l_je_li_dobitni.Text = "Tiket je dobitni i dobitak iznosi :" + tiket_za_preradu.Dobitak + " KM";
                 }
+                if(tiket_za_preradu.JeliKasno(DateTime.Now)) l_je_li_dobitni.Text+=" i nije ga moguće stronirati!";
+                if (!tiket_za_preradu.JeliKasno(DateTime.Now)) l_je_li_dobitni.Text += " i moguće je ga stronirati!";
             }
             catch (Exception g)
             {

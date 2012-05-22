@@ -38,8 +38,8 @@ namespace DAL
                     List<Ucesnik> Ucesnikovi = new List<Ucesnik>();
                     while (r.Read())
                     {
-                        Ucesnik f = new Ucesnik(r.GetString("ImePrezime"), r.GetString("JMBG"));
-                        f.Id = r.GetInt32("IDUcesnika");
+                        Ucesnik f = new Ucesnik(r.GetString("ime"), r.GetString("Picpath"));
+                        f.Id = r.GetInt32("IDUcesnik");
                         Ucesnikovi.Add(f);
                     }
                     return Ucesnikovi;
@@ -80,7 +80,7 @@ namespace DAL
             public List<Ucesnik> getByExample(string name, string value)
             {
                 List<Ucesnik> lista_uc = new List<Ucesnik>();
-                c = new MySqlCommand("SELECT * from ucesnik WHERE ime like '" + name + "%' a", con);
+                c = new MySqlCommand("SELECT * from ucesnik WHERE ime like '" + name + "%'", con);
                 MySqlDataReader r = c.ExecuteReader();
                 while (r.Read()) { 
                  Ucesnik cla = new Ucesnik(r.GetString("ime"), r.GetString("picpath"));

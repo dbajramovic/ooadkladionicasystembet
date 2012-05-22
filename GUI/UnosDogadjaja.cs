@@ -236,12 +236,18 @@ namespace GUI
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Takmicenje t = (Takmicenje)comboBox1.SelectedItem;
+            lista_ucesnika2.Clear();
+            lista_ucesnika1.Clear();
+            c_imeprvogucenika.DataSource = null;
+            c_imedrugogucesnika.DataSource = null;
             DAL.DAL d = DAL.DAL.Instanca;
             d.kreirajKonekciju("localhost", "kladionica", "root", "");
             DAL.DAL.TakmicenjeDAO dd = d.getDAO.getTakmicenjeDAO();
             lista_ucesnika2 = dd.DajPovezaneUcesnike(t);
             lista_ucesnika1 = dd.DajPovezaneUcesnike(t);
             d.terminirajKonekciju();
+            c_imeprvogucenika.DataSource = lista_ucesnika2;
+            c_imedrugogucesnika.DataSource = lista_ucesnika1;
         }
     }
 }

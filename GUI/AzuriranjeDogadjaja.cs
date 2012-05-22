@@ -16,7 +16,6 @@ namespace GUI
     public partial class AzuriranjeDogadjaja : Form
     {
         Boolean selektirano = false;
-        MySqlConnection p;
         Dogadjaj rezultat;
         List<Dogadjaj> lista_dogadjaja = new List<Dogadjaj>();
         List<Ucesnik> lista_ucesnika1, lista_ucesnika2;
@@ -129,12 +128,25 @@ namespace GUI
                 double kvota1, kvotax, kvota2, kvota1x, kvotax2, kvota12;
                 int temp;
                 Dogadjaj rezultat = new Dogadjaj(Convert.ToString(dataGridView1.SelectedRows[0].Cells[1].Value), Convert.ToString(dataGridView1.SelectedRows[0].Cells[2].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[3].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[4].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[5].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[6].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[7].Value), Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[8].Value), Convert.ToString(dataGridView1.SelectedRows[0].Cells[9].Value), Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[10].Value));
+                DAL.DAL d = DAL.DAL.Instanca;
+                d.kreirajKonekciju("localhost", "kladionica", "root", "");
+                DAL.DAL.UcesnikDAO dd = d.getDAO.getUcesnikDAO();
+                lista_ucesnika1 = dd.getAll();
+                d.terminirajKonekciju();
+                c_imedrugogucesnika.DataSource = null;
+                c_imedrugogucesnika.DataSource = lista_ucesnika1;
+                c_imedrugogucesnika.Text = rezultat.ImeDrugogUcesnika;
+                c_imeprvogucenika.Text = rezultat.ImePrvogUcesnika;
+                foreach (Ucesnik u in lista_ucesnika1)
+                {
+                    if (c_imedrugogucesnika.Text == u.Ime) pictureBox1.ImageLocation = u.Picpath;
+                    if (c_imeprvogucenika.Text == u.Ime) pictureBox2.ImageLocation = u.Picpath;
+                }
                 groupBox1.Visible = true;
                 dtp_do.Value = Convert.ToDateTime(rezultat.DatumOdrzavanja);
                 n_satnica_m.Value = rezultat.SatnicaOdrzavanja % 100;
                 n_satnica_h.Value = rezultat.SatnicaOdrzavanja / 100;
-                c_imedrugogucesnika.Text = rezultat.ImeDrugogUcesnika;
-                c_imeprvogucenika.Text = rezultat.ImePrvogUcesnika;
+               
                 n_rezultat.Value = rezultat.Rezultat;
                 kvota1 = rezultat.Kvota_1;
                 kvotax = rezultat.Kvota_X;
