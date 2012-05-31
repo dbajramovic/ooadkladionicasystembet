@@ -61,6 +61,7 @@
     <Compile Include="DAO\UposlenikDAO.cs" />
     <Compile Include="Entiteti\Clan.cs" />
     <Compile Include="Entiteti\Dogadjaj.cs" />
+    <Compile Include="Entiteti\Encrypt.cs" />
     <Compile Include="Entiteti\Osoba.cs" />
     <Compile Include="Entiteti\Pitanje.cs" />
     <Compile Include="Entiteti\Takmicenje.cs" />

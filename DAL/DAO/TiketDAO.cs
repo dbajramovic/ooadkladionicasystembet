@@ -46,12 +46,15 @@ namespace DAL
                     List<Tiket> tiketi = new List<Tiket>();
                     while (r.Read())
                     {
-                        Tiket t = new Tiket(r.GetDateTime("datum"));
-                        t.Dobitak = r.GetDouble("Dobitak");
-                        t.Uplata = r.GetDouble("Uplata");
-                        t.Da_Li_Je_Clan_Uplatio = r.GetBoolean("Clan");
-                        tiketi.Add(t);
+                        Tiket tik = new Tiket(Convert.ToDateTime(r.GetString("Datum")));
+                        tik.Da_Li_Je_Clan_Uplatio = r.GetBoolean("Clan");
+                        tik.Uplata = r.GetDouble("Uplata");
+                        tik.Dobitak = r.GetDouble("Dobitak");
+                        tik.ID_Tiketa = r.GetInt32("idtiketi");
+                        tiketi.Add(tik);
+
                     }
+                    r.Close();
                     return tiketi;
                 }
                 catch (Exception e)

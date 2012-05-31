@@ -30,12 +30,13 @@ namespace GUI
         {
             try
             {
+                Encrypt enc = new Encrypt();
                 DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("localhost", "kladionica", "root", "");
                 DAL.DAL.ClanDAO ud = new DAL.DAL.ClanDAO();
                 Clan c = ud.getById(Convert.ToInt32(textBox1.Text));
                 d.terminirajKonekciju();
-                t_ime.Text = c.ImePrezime;
+                t_ime.Text = enc.DecryptString(c.ImePrezime);
                 t_jmbg.Text = c.Jmbg;
                 pictureBox1.ImageLocation = c.Picpath;
                 groupBox1.Visible = true;
