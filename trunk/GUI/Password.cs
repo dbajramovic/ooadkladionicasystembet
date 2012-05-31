@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DAL.Entiteti;
 
 namespace GUI
 {
@@ -18,19 +19,15 @@ namespace GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Encrypt enc = new Encrypt();
+            MessageBox.Show(enc.DecryptString(maskedTextBox1.Text));
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (maskedTextBox1.Text == "w00t")
-            {
-                RegistracijaZaposlenika rz = new RegistracijaZaposlenika();
-                rz.Show();
-                this.Close();
-            }
-            else
-                MessageBox.Show("Pogrešan password!");
+            Encrypt enc = new Encrypt();
+            MessageBox.Show(enc.EncryptString(maskedTextBox1.Text));
+            maskedTextBox1.Text = enc.EncryptString(maskedTextBox1.Text);
         }
     }
 }

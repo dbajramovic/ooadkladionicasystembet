@@ -9,19 +9,27 @@ using System.Windows.Forms;
 using System.Xml;
 using DAL.Entiteti;
 using DAL.Interfejsi;
-
+using System.Threading;
 namespace GUI
 {
     public partial class SystemBet : Form
     {
+        Thread isteknuce;
+        List<Tiket> lista_za_provjeru = new List<Tiket>();
         public SystemBet()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void SystemBet_Load(object sender, EventArgs e)
         {
             pictureBox1.ImageLocation = "C:\\Users\\DebilMC\\Desktop\\SystemBetSlike\\Logo.png";
+            foreach (Tiket t in lista_za_provjeru)
+            {
+                MessageBox.Show(Convert.ToString(t.Uplata));
+            }
+            isteknuce = new Thread(PrvojeraIsteknuca);
+            isteknuce.Start();           
         }
 
         private void b_unos_d_Click(object sender, EventArgs e)
@@ -155,7 +163,6 @@ namespace GUI
         {
             DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("localhost", "kladionica", "root", "");
-
                 DAL.DAL.DogadjajDAO dd = d.getDAO.getDogadjajDAO();
                 List<Dogadjaj> lista_za_ponudu = dd.getAll();
                 d.terminirajKonekciju();
@@ -217,6 +224,44 @@ namespace GUI
         {
             ProvjeraDobitka pd = new ProvjeraDobitka();
             pd.Show();
+        }
+        public void PrvojeraIsteknuca()
+        {
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju("localhost", "kladionica", "root", "");
+            DAL.DAL.TiketDAO tt = d.getDAO.getTiketDAO();
+            lista_za_provjeru = tt.getAll();
+            d.terminirajKonekciju();
+            int broj_isteknutih = 0;
+            foreach (Tiket t in lista_za_provjeru)
+                {
+                    if (t.JeliKasno(DateTime.Now))
+                    {
+                        broj_isteknutih++;
+                    }
+
+                }
+            toolStripStatusLabel1.Text = "Trenutačno je nemoguće stronirati " + broj_isteknutih + " tiketa!";
+        }
+
+        private void SystemBet_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
+
+        private void SystemBet_Leave(object sender, EventArgs e)
+        {
+            isteknuce.Suspend();
+        }
+
+        private void SystemBet_Enter(object sender, EventArgs e)
+        {
+            isteknuce.Resume();
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Password p = new Password();
+            p.Show();
         }
     }
 }
